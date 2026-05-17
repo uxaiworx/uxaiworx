@@ -1260,6 +1260,37 @@ if (videoModal) {
   });
 }
 </script>
+<script>
+const form = document.querySelector('.contact__form');
+form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    });
+    if (response.ok) {
+        form.innerHTML = '<p style="color:#E8563A;font-size:1.2rem;font-weight:600;padding:20px 0;">Message sent! I\'ll be in touch within 24 hours.</p>';
+    }
+});
+</script>
+
+<script>
+const form = document.querySelector('.contact__form');
+form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    });
+    if (response.ok) {
+        form.innerHTML = '<p style="color:#E8563A;font-size:1.2rem;font-weight:600;padding:20px 0;">Message sent! I\'ll be in touch within 24 hours.</p>';
+    }
+});
+</script>
+
 </body>
 </html>
+
 
