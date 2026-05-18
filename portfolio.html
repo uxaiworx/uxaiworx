@@ -557,7 +557,7 @@ if (localStorage.getItem("theme-color") === "light") {
 </section>
 <!-- End skills Section -->
 
-       <!-- Start portfolio section -->
+     <!-- Start portfolio section -->
 <section class="portfolio__section portfolio__section--bg section--padding" id="portfolio">
     <div class="container">
         <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
@@ -566,164 +566,237 @@ if (localStorage.getItem("theme-color") === "light") {
                 <h2 class="section__heading--title">Designed With Purpose. Built With Proof.</h2> 
             </div>
         </div>
-                <div class="portfolio__section--inner">
-                    <div class="button-group filters-button-group mb-50">
-                        <button class="filters__button--items button is-checked" data-filter="*">Show All</button>
-                        <button class="filters__button--items button" data-filter=".web">Web</button>
-                        <button class="filters__button--items button" data-filter=".graphics">Graphics</button>
-                        <button class="filters__button--items button" data-filter=".development">Development</button>
-                        <button class="filters__button--items button" data-filter=".mobile">Mobile</button>
-                    </div>
-                    <div class="portfolio__grid mb--n30">
-                        <div class="element-item web" data-category="web">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio1.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
+        <div class="portfolio__section--inner">
+            <div class="button-group filters-button-group mb-50">
+                <button class="filters__button--items button is-checked" data-filter="*">Show All</button>
+                <button class="filters__button--items button" data-filter=".web">Web</button>
+                <button class="filters__button--items button" data-filter=".graphics">Graphics</button>
+                <button class="filters__button--items button" data-filter=".development">Development</button>
+                <button class="filters__button--items button" data-filter=".mobile">Mobile</button>
+            </div>
+            <div class="portfolio__grid mb--n30">
+
+                <!-- Web 1 -->
+                <div class="element-item web" data-category="web">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio1.png" alt="The Club at Tamarack">
                             </div>
-                        </div>
-                        <div class="element-item graphics" data-category="graphics">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio2.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">The Club at Tamarack</h3>
+                                <p class="portfolio__desc text-white">Ski resort members portal and digital experience.</p>
                             </div>
-                        </div>
-                        <div class="element-item development" data-category="development">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio3.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="element-item mobile" data-category="mobile">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio4.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="element-item web" data-category="web">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio5.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="element-item graphics" data-category="graphics">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio6.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="element-item development" data-category="development">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio7.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="element-item web" data-category="web">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio8.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="element-item mobile" data-category="mobile">
-                            <div class="portfolio__card">
-                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                                    <div class="portfolio__image--card">
-                                    <img src="assets/img/other/portfolio9.png" alt="img">
-                                    </div>
-                                    <div class="portfolio__content">
-                                        <span class="portfolio__zoom text-white">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                        </span>
-                                        <h3 class="portfolio__title text-white">Illustration</h3>
-                                        <p class="portfolio__desc text-white">Promote your blog posts, case udie, and thehe branded videos.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Web 2 -->
+                <div class="element-item web" data-category="web">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio2.png" alt="NARE Tribune Tower">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">NARE — Tribune Tower</h3>
+                                <p class="portfolio__desc text-white">Iconic landmark real estate digital presence.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web 3 -->
+                <div class="element-item web" data-category="web">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio3.png" alt="PracticeCompass">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">PracticeCompass</h3>
+                                <p class="portfolio__desc text-white">Medical SaaS website design and user experience.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphics 1 -->
+                <div class="element-item graphics" data-category="graphics">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio4.png" alt="Aspire Logo">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">Aspire Logo</h3>
+                                <p class="portfolio__desc text-white">Brand identity design for mobile LMS client app.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphics 2 -->
+                <div class="element-item graphics" data-category="graphics">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio5.png" alt="Ignition">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">Ignition</h3>
+                                <p class="portfolio__desc text-white">CRM SaaS company logo refresh and brand identity.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphics 3 -->
+                <div class="element-item graphics" data-category="graphics">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio6.png" alt="Job Hunters">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">Job Hunters</h3>
+                                <p class="portfolio__desc text-white">Startup logo design and visual brand system.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Development 1 -->
+                <div class="element-item development" data-category="development">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio7.png" alt="University of Chicago">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">University of Chicago</h3>
+                                <p class="portfolio__desc text-white">Consult and surgical dashboard web application.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Development 2 -->
+                <div class="element-item development" data-category="development">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio8.png" alt="Ciroc Music Site">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">Ciroc Music Site</h3>
+                                <p class="portfolio__desc text-white">Diageo brand and music microsite across five cities.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Development 3 -->
+                <div class="element-item development" data-category="development">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio9.png" alt="LOF Gaming Engine">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">LOF — Gaming Engine</h3>
+                                <p class="portfolio__desc text-white">Gaming engine built for in-store retail campaign.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile 1 -->
+                <div class="element-item mobile" data-category="mobile">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio10.png" alt="Aspire App">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">Aspire App</h3>
+                                <p class="portfolio__desc text-white">LMS mobile app designed for B2B training delivery.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile 2 -->
+                <div class="element-item mobile" data-category="mobile">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio11.png" alt="Famous Footwear">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">Famous Footwear</h3>
+                                <p class="portfolio__desc text-white">Retail traffic driver app for in-store engagement.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile 3 -->
+                <div class="element-item mobile" data-category="mobile">
+                    <div class="portfolio__card">
+                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                            <div class="portfolio__image--card">
+                                <img src="assets/img/other/portfolio12.png" alt="Sprint">
+                            </div>
+                            <div class="portfolio__content">
+                                <span class="portfolio__zoom text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                                </span>
+                                <h3 class="portfolio__title text-white">Sprint</h3>
+                                <p class="portfolio__desc text-white">Instant-win telecom game for mobile engagement.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-        </section>
-        <!-- End portfolio section -->
+        </div>
+    </div>
+</section>
+<!-- End portfolio section -->
         
        <!-- Start portfolio/case study section -->
 <section class="testimonial__section section--padding position__relative" id="portfolio">
