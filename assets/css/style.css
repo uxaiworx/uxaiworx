@@ -7136,4 +7136,24 @@ blockquote::before {
 .dark .contact__section--bg {
     padding-bottom: 60px !important;
 }
+.portfolio__image--card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.portfolio__image--card {
+    height: 311px !important;
+    overflow: hidden !important;
+}
+
+.portfolio__image--card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.section__heading--desc {
+    margin-top: 20px !important;
+}
 
