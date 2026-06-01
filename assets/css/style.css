@@ -6774,35 +6774,17 @@ blockquote::before {
 }
 /* --- Ways I Work tags --- */
 .ways-tag {
-    display: inline-block;
-    border: 2px solid #333333;
-    color: #333333;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 600;
-    font-size: 1.7rem;
-    padding: 18px 30px;
-    border-radius: 4px;
-    letter-spacing: 0.02em;
-    width: calc(25% - 12px);
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.dark .ways-tag {
-    border-color: #ffffff;
-    color: #ffffff;
-}
-
-@media (max-width: 992px) {
-    .ways-tag {
-        width: calc(50% - 8px);
-    }
-}
-
-@media (max-width: 576px) {
-    .ways-tag {
-        width: 100%;
-    }
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+  padding: 12px 24px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 .skills__text {
