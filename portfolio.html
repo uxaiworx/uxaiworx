@@ -496,60 +496,60 @@ if (localStorage.getItem("theme-color") === "light") {
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">Figma</span>
-                        <span class="skills__count width_70">70%</span>
+                        <span class="skills__count width_70" data-count="70">0%</span>
                     </div>
-                    <div class="skills__field width_70"></div>
+                    <div class="skills__field width_70" data-width="70"></div>
                 </div>
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">HTML & CSS</span>
-                        <span class="skills__count width_80">80%</span>
+                        <span class="skills__count width_80" data-count="80">0%</span>
                     </div>
-                    <div class="skills__field width_80"></div>
+                    <div class="skills__field width_80" data-width="80"></div>
                 </div>
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">Creative Cloud</span>
-                        <span class="skills__count width_85">85%</span>
+                        <span class="skills__count width_85" data-count="85">0%</span>
                     </div>
-                    <div class="skills__field width_85"></div>
+                    <div class="skills__field width_85" data-width="85"></div>
                 </div>
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">Google Workspace</span>
-                        <span class="skills__count width_95">95%</span>
+                        <span class="skills__count width_95" data-count="95">0%</span>
                     </div>
-                    <div class="skills__field width_95"></div>
+                    <div class="skills__field width_95" data-width="95"></div>
                 </div>
             </div>
             <div class="skills__step">
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">Slack</span>
-                        <span class="skills__count width_90">90%</span>
+                        <span class="skills__count width_90" data-count="90">0%</span>
                     </div>
-                    <div class="skills__field width_90"></div>
+                    <div class="skills__field width_90" data-width="90"></div>
                 </div>
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">Hotjar</span>
-                        <span class="skills__count width_60">60%</span>
+                        <span class="skills__count width_60" data-count="60">0%</span>
                     </div>
-                    <div class="skills__field width_60"></div>
+                    <div class="skills__field width_60" data-width="60"></div>
                 </div>
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">ClickUp & Asana</span>
-                        <span class="skills__count width_80">80%</span>
+                        <span class="skills__count width_80" data-count="80">0%</span>
                     </div>
-                    <div class="skills__field width_80"></div>
+                    <div class="skills__field width_80" data-width="80"></div>
                 </div>
                 <div class="skills__items">
                     <div class="skills__text">
                         <span class="skills__name">Claude, GPT & Gemini</span>
-                        <span class="skills__count width_90">90%</span>
+                        <span class="skills__count width_90" data-count="90">0%</span>
                     </div>
-                    <div class="skills__field width_90"></div>
+                    <div class="skills__field width_90" data-width="90"></div>
                 </div>
             </div>
         </div>
@@ -1345,6 +1345,49 @@ form.addEventListener('submit', async function(e) {
         form.innerHTML = '<div style="display:inline-block;background:#E8563A;color:#ffffff;font-size:1.4rem;font-weight:600;padding:16px 36px;border-radius:50px;margin-top:20px;letter-spacing:0.02em;animation:pulse 1.5s ease-in-out infinite;">✓ Message sent! I\'ll be in touch within 24 hours.</div><style>@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(232,86,58,0.4)}50%{transform:scale(1.03);box-shadow:0 0 0 12px rgba(232,86,58,0)}}</style>';
     }
 });
+</script>
+
+<script>
+(function() {
+  var bars = document.querySelectorAll('.skills__field');
+  var counts = document.querySelectorAll('.skills__count');
+  var animated = false;
+
+  bars.forEach(function(bar) {
+    bar.style.setProperty('--bar-width', bar.dataset.width + '%');
+  });
+
+  function animateSkills() {
+    if (animated) return;
+    animated = true;
+    bars.forEach(function(bar) {
+      bar.classList.add('animate');
+    });
+    counts.forEach(function(el) {
+      var target = parseInt(el.dataset.count);
+      var start = 0;
+      var duration = 1200;
+      var startTime = null;
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var ease = progress * (2 - progress);
+        el.textContent = Math.floor(ease * target) + '%';
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) animateSkills();
+    });
+  }, { threshold: 0.3 });
+
+  var section = document.querySelector('.skills__section');
+  if (section) observer.observe(section);
+})();
 </script>
 
 </body>

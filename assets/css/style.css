@@ -7157,3 +7157,16 @@ blockquote::before {
     margin-top: 20px !important;
 }
 
+/* Skills bar animation */
+.skills__field {
+  width: 0% !important;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skills__field.animate {
+  width: var(--bar-width) !important;
+}
+.skills__count {
+  min-width: 48px;
+  text-align: right;
+}
+
