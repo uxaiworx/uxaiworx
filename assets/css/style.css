@@ -6773,18 +6773,53 @@ blockquote::before {
     -webkit-text-stroke: 0 !important;
 }
 /* --- Ways I Work tags --- */
+.brand__section {
+  position: relative;
+  overflow: hidden;
+}
+.keyboard-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  max-width: 700px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+.brand__section .section__heading,
+.brand__section .d-flex {
+  position: relative;
+  z-index: 1;
+}
 .ways-tag {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
   border-radius: 50px;
-  padding: 12px 24px;
+  padding: 12px 28px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   display: inline-block;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .brand__section .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ways-tag {
+    width: 80%;
+    text-align: center;
+    white-space: normal;
+  }
+  .keyboard-bg {
+    width: 120%;
+  }
 }
 
 .skills__text {
