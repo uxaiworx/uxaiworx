@@ -5874,20 +5874,6 @@ blockquote::before {
   left: 67%;
 }
 
-.skills__count::before {
-  position: absolute;
-  content: "";
-  -webkit-clip-path: polygon(0 0, 46% 97%, 100% 0);
-          clip-path: polygon(0 0, 46% 97%, 100% 0);
-  width: 1.25rem;
-  height: 1.25rem;
-  background: var(--secondary-color);
-  z-index: -10;
-  top: 24px;
-  left: 50%;
-  -webkit-transform: translatex(-50%);
-          transform: translatex(-50%);
-}
 
 /*
     16. testimonial css
