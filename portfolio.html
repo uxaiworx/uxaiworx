@@ -1330,6 +1330,10 @@ if (videoModal) {
     video.pause();
     video.currentTime = 0;
   });
+  videoModal.addEventListener('show.bs.modal', function () {
+    var video = document.getElementById('modalVideoIframe');
+    video.play();
+  });
 }
 </script>
 <script>
