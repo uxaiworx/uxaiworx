@@ -178,13 +178,20 @@ function handleBodyClick(evt) {
 const isotopeGrid = document.querySelector(".portfolio__grid");
 if(isotopeGrid){
   imagesLoaded(isotopeGrid, function( instance ) {
+    function getIsoOptions() {
+      return {
+        itemSelector: '.element-item',
+        percentPosition: true,
+        masonry: {
+          columnWidth: window.innerWidth <= 768 ? isotopeGrid.offsetWidth : ".element-item"
+        }
+      };
+    }
     // init Isotope
-    var iso = new Isotope(isotopeGrid, {
-      itemSelector: '.element-item',
-      percentPosition: true,
-      masonry: {
-        columnWidth: window.innerWidth <= 768 ? isotopeGrid.offsetWidth : ".element-item"
-      }
+    var iso = new Isotope(isotopeGrid, getIsoOptions());
+    window.addEventListener('resize', function() {
+      iso.options.masonry.columnWidth = window.innerWidth <= 768 ? isotopeGrid.offsetWidth : ".element-item";
+      iso.layout();
     });
 
     // filter functions
