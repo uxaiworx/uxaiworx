@@ -243,6 +243,16 @@ if(isotopeGrid){
   }
 }
 
+window.addEventListener('load', function() {
+  if (window.innerWidth <= 768) {
+    var items = document.querySelectorAll('.portfolio__items .element-item');
+    var container = document.querySelector('.portfolio__items');
+    if (container) container.removeAttribute('style');
+    items.forEach(function(item) {
+      item.removeAttribute('style');
+    });
+  }
+});
 
 // CounterUp Activation
 const wrapper = document.getElementById("funfactId");
