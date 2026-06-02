@@ -4385,13 +4385,8 @@ blockquote::before {
 }
 
 @media (max-width: 768px) {
-  .portfolio__grid .element-item,
-  .portfolio__grid .grid__item,
-  .portfolio__grid .col-lg-4,
-  .portfolio__grid [class*="col-"] {
+  .element-item {
     width: 100% !important;
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
   }
 }
 
