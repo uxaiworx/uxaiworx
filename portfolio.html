@@ -628,16 +628,15 @@ if (localStorage.getItem("theme-color") === "light") {
         </div>
         <div class="portfolio__section--inner">
             <div class="button-group filters-button-group mb-50">
-                <button class="filters__button--items button is-checked" data-filter="*">Show All</button>
-                <button class="filters__button--items button" data-filter=".web">Web</button>
-                <button class="filters__button--items button" data-filter=".graphics">Graphics</button>
-                <button class="filters__button--items button" data-filter=".development">Development</button>
-                <button class="filters__button--items button" data-filter=".mobile">Mobile</button>
+                <button class="filters__button--items button is-checked" data-filter="*">All</button>
+                <button class="filters__button--items button" data-filter=".brands">Brands</button>
+                <button class="filters__button--items button" data-filter=".enterprise">Enterprise</button>
+                <button class="filters__button--items button" data-filter=".products">Products</button>
             </div>
             <div class="portfolio__grid mb--n30">
 
                 <!-- Web 1 -->
-                <div class="element-item web" data-category="web">
+                <div class="element-item products" data-category="products">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
@@ -655,17 +654,17 @@ if (localStorage.getItem("theme-color") === "light") {
                 </div>
 
                 <!-- Web 2 -->
-                <div class="element-item web" data-category="web">
+                <div class="element-item enterprise" data-category="enterprise">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
-                                <img src="assets/img/other/portfolio2.png" alt="NARE Tribune Tower">
+                                <img src="assets/img/other/portfolio2.png" alt="Tribune Tower">
                             </div>
                             <div class="portfolio__content">
                                 <span class="portfolio__zoom text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
                                 </span>
-                                <h3 class="portfolio__title text-white">NARE — Tribune Tower</h3>
+                                <h3 class="portfolio__title text-white">Tribune Tower</h3>
                                 <p class="portfolio__desc text-white">Iconic landmark real estate digital presence.</p>
                             </div>
                         </a>
@@ -673,7 +672,7 @@ if (localStorage.getItem("theme-color") === "light") {
                 </div>
 
                 <!-- Web 3 -->
-                <div class="element-item web" data-category="web">
+                <div class="element-item products" data-category="products">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
@@ -690,62 +689,8 @@ if (localStorage.getItem("theme-color") === "light") {
                     </div>
                 </div>
 
-                <!-- Graphics 1 -->
-                <div class="element-item graphics" data-category="graphics">
-                    <div class="portfolio__card">
-                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                            <div class="portfolio__image--card">
-                                <img src="assets/img/other/portfolio4.png" alt="Aspire Logo">
-                            </div>
-                            <div class="portfolio__content">
-                                <span class="portfolio__zoom text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                </span>
-                                <h3 class="portfolio__title text-white">Aspire Logo</h3>
-                                <p class="portfolio__desc text-white">Brand identity design for mobile LMS client app.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Graphics 2 -->
-                <div class="element-item graphics" data-category="graphics">
-                    <div class="portfolio__card">
-                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                            <div class="portfolio__image--card">
-                                <img src="assets/img/other/portfolio5.png" alt="Ignition">
-                            </div>
-                            <div class="portfolio__content">
-                                <span class="portfolio__zoom text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                </span>
-                                <h3 class="portfolio__title text-white">Ignition</h3>
-                                <p class="portfolio__desc text-white">CRM SaaS company logo refresh and brand identity.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Graphics 3 -->
-                <div class="element-item graphics" data-category="graphics">
-                    <div class="portfolio__card">
-                        <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                            <div class="portfolio__image--card">
-                                <img src="assets/img/other/portfolio6.png" alt="Job Hunters">
-                            </div>
-                            <div class="portfolio__content">
-                                <span class="portfolio__zoom text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                                </span>
-                                <h3 class="portfolio__title text-white">Job Hunters</h3>
-                                <p class="portfolio__desc text-white">Startup logo design and visual brand system.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Development 1 -->
-                <div class="element-item development" data-category="development">
+                <!-- Enterprise 2 -->
+                <div class="element-item enterprise" data-category="enterprise">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
@@ -763,7 +708,7 @@ if (localStorage.getItem("theme-color") === "light") {
                 </div>
 
                 <!-- Development 2 -->
-                <div class="element-item development" data-category="development">
+                <div class="element-item brands" data-category="brands">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
@@ -781,7 +726,7 @@ if (localStorage.getItem("theme-color") === "light") {
                 </div>
 
                 <!-- Development 3 -->
-                <div class="element-item development" data-category="development">
+                <div class="element-item brands" data-category="brands">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
@@ -799,7 +744,7 @@ if (localStorage.getItem("theme-color") === "light") {
                 </div>
 
                 <!-- Mobile 1 -->
-                <div class="element-item mobile" data-category="mobile">
+                <div class="element-item products" data-category="products">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
@@ -817,7 +762,7 @@ if (localStorage.getItem("theme-color") === "light") {
                 </div>
 
                 <!-- Mobile 2 -->
-                <div class="element-item mobile" data-category="mobile">
+                <div class="element-item brands" data-category="brands">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
@@ -834,19 +779,19 @@ if (localStorage.getItem("theme-color") === "light") {
                     </div>
                 </div>
 
-                <!-- Mobile 3 -->
-                <div class="element-item mobile" data-category="mobile">
+                <!-- Enterprise 3 -->
+                <div class="element-item enterprise" data-category="enterprise">
                     <div class="portfolio__card">
                         <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#portfolioModal">
                             <div class="portfolio__image--card">
-                                <img src="assets/img/other/portfolio12.png" alt="Sprint">
+                                <img src="assets/img/other/portfolio13.png" alt="Synegen">
                             </div>
                             <div class="portfolio__content">
                                 <span class="portfolio__zoom text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
                                 </span>
-                                <h3 class="portfolio__title text-white">Sprint</h3>
-                                <p class="portfolio__desc text-white">Instant-win telecom game for mobile engagement.</p>
+                                <h3 class="portfolio__title text-white">Synegen</h3>
+                                <p class="portfolio__desc text-white">LMS company marketing website.</p>
                             </div>
                         </a>
                     </div>
