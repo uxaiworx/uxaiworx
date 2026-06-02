@@ -6812,19 +6812,22 @@ blockquote::before {
   .brand__section .d-flex {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
   .ways-tag {
     width: auto !important;
-    min-width: 200px;
-    max-width: 280px;
-    padding: 14px 36px;
+    min-width: 220px;
+    max-width: 300px;
     text-align: center;
     border-radius: 50px !important;
-    background: rgba(255, 255, 255, 0.12) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
-    backdrop-filter: blur(20px) saturate(160%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 2px solid #e05c2e !important;
+    color: #ffffff !important;
+    padding: 12px 32px;
+    font-size: 1rem;
+    box-shadow: none !important;
   }
   .keyboard-bg {
     width: 140%;
