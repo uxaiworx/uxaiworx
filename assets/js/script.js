@@ -228,6 +228,29 @@ if (isotopeGrid && window.innerWidth > 768) {
   });
 }
 
+function mobilePortfolioFix() {
+  if (window.innerWidth <= 768) {
+    var container = document.querySelector('.portfolio__items');
+    var items = document.querySelectorAll('.portfolio__items .element-item');
+
+    // Destroy Isotope if it exists
+    if (container && $(container).data('isotope')) {
+      $(container).isotope('destroy');
+    }
+
+    // Force styles
+    if (container) {
+      container.setAttribute('style', 'display:flex !important; flex-direction:column !important; height:auto !important; position:relative !important;');
+    }
+    items.forEach(function(item) {
+      item.setAttribute('style', 'position:static !important; width:100% !important; transform:none !important; margin-bottom:16px !important;');
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', mobilePortfolioFix);
+window.addEventListener('resize', mobilePortfolioFix);
+
 // CounterUp Activation
 const wrapper = document.getElementById("funfactId");
 if (wrapper) {
