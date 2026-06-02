@@ -7261,3 +7261,11 @@ blockquote::before {
   text-align: right;
 }
 
+@media (max-width: 768px) {
+  .portfolio__modal--img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
