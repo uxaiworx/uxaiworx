@@ -4385,6 +4385,7 @@ blockquote::before {
 }
 
 @media (max-width: 768px) {
+  .portfolio__grid .element-item,
   .portfolio__grid .grid__item,
   .portfolio__grid .col-lg-4,
   .portfolio__grid [class*="col-"] {
