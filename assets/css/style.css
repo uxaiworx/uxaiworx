@@ -2855,6 +2855,12 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+@media (max-width: 768px) {
+  .logo__positioning.two {
+    margin-top: 30px;
+  }
+}
+
 @media only screen and (max-width: 1199px) {
   .logo__positioning img {
     max-width: 7rem;
