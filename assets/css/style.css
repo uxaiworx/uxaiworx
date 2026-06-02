@@ -6784,7 +6784,7 @@ blockquote::before {
   transform: translate(-50%, -50%);
   width: 75%;
   max-width: 700px;
-  opacity: 0.06;
+  opacity: 0.06 !important;
   pointer-events: none;
   z-index: 0;
 }
@@ -6803,22 +6803,25 @@ blockquote::before {
   padding: 12px 28px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   display: inline-block;
   white-space: nowrap;
+  width: auto !important;
 }
 @media (max-width: 768px) {
   .brand__section .d-flex {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
   }
   .ways-tag {
-    width: 80%;
+    width: auto !important;
+    padding: 14px 40px;
     text-align: center;
-    white-space: normal;
   }
   .keyboard-bg {
-    width: 120%;
+    width: 140%;
+    opacity: 0.04 !important;
   }
 }
 
