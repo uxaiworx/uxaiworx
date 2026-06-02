@@ -6810,24 +6810,42 @@ blockquote::before {
 }
 @media (max-width: 768px) {
   .brand__section .d-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0 16px;
   }
   .ways-tag {
-    width: auto !important;
-    min-width: 220px;
-    max-width: 300px;
-    text-align: center;
-    border-radius: 50px !important;
+    position: relative;
     background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    border: 2px solid #e05c2e !important;
-    color: #ffffff !important;
-    padding: 12px 32px;
-    font-size: 1rem;
     box-shadow: none !important;
+    padding: 16px 8px 16px 8px;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .ways-tag::before {
+    content: attr(data-num);
+    font-size: 72px;
+    font-weight: 800;
+    color: #ffffff;
+    opacity: 0.07;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    line-height: 1;
+    z-index: 0;
+  }
+  .ways-tag span {
+    position: relative;
+    z-index: 1;
   }
   .keyboard-bg {
     width: 140%;
