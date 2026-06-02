@@ -175,81 +175,45 @@ function handleBodyClick(evt) {
 
 /** -------- Isotope activation js ----------- **/
 
-const isotopeGrid = document.querySelector(".portfolio__grid");
-if (isotopeGrid && window.innerWidth > 768) {
-  imagesLoaded(isotopeGrid, function( instance ) {
-    // init Isotope
-    var iso = new Isotope(isotopeGrid, {
-      itemSelector: '.element-item',
-      percentPosition: true,
-      masonry: {
-        columnWidth: ".element-item"
-      }
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.querySelector('.portfolio__grid');
+  if (!container) return;
 
-    // filter functions
-    var filterFns = {
-      numberGreaterThan50: function( itemElem ) {
-        var number = itemElem.querySelector('.number').textContent;
-        return parseInt( number, 10 ) > 50;
-      },
-      ium: function( itemElem ) {
-        var name = itemElem.querySelector('.name').textContent;
-        return name.match( /ium$/ );
-      }
-    };
-
-    // bind filter button click
-    var filtersElem = document.querySelector('.filters-button-group');
-    filtersElem.addEventListener( 'click', function( event ) {
-      if ( !matchesSelector( event.target, 'button' ) ) {
-        return;
-      }
-      var filterValue = event.target.getAttribute('data-filter');
-      filterValue = filterFns[ filterValue ] || filterValue;
-      iso.arrange({ filter: filterValue });
-    });
-
-    // change is-checked class on buttons
-    var buttonGroups = document.querySelectorAll('.button-group');
-    for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-      radioButtonGroup( buttonGroups[i] );
-    }
-
-    function radioButtonGroup( buttonGroup ) {
-      buttonGroup.addEventListener( 'click', function( event ) {
-        if ( !matchesSelector( event.target, 'button' ) ) {
-          return;
-        }
-        buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-        event.target.classList.add('is-checked');
-      });
-    }
-  });
-}
-
-function mobilePortfolioFix() {
   if (window.innerWidth <= 768) {
-    var container = document.querySelector('.portfolio__items');
-    var items = document.querySelectorAll('.portfolio__items .element-item');
+    // Mobile: no Isotope, plain stack
+    container.style.cssText = 'display:flex; flex-direction:column; height:auto;';
+    container.querySelectorAll('.element-item').forEach(function(item) {
+      item.style.cssText = 'position:static; width:100%; transform:none; margin-bottom:16px;';
+    });
+  } else {
+    // Desktop: run Isotope normally
+    imagesLoaded(container, function() {
+      var iso = new Isotope(container, {
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows'
+      });
 
-    // Destroy Isotope if it exists
-    if (container && $(container).data('isotope')) {
-      $(container).isotope('destroy');
-    }
+      // bind filter button click
+      var filtersElem = document.querySelector('.filters-button-group');
+      if (filtersElem) {
+        filtersElem.addEventListener('click', function(event) {
+          if (!matchesSelector(event.target, 'button')) return;
+          var filterValue = event.target.getAttribute('data-filter');
+          iso.arrange({ filter: filterValue });
+        });
+      }
 
-    // Force styles
-    if (container) {
-      container.setAttribute('style', 'display:flex !important; flex-direction:column !important; height:auto !important; position:relative !important;');
-    }
-    items.forEach(function(item) {
-      item.setAttribute('style', 'position:static !important; width:100% !important; transform:none !important; margin-bottom:16px !important;');
+      // change is-checked class on buttons
+      document.querySelectorAll('.button-group').forEach(function(buttonGroup) {
+        buttonGroup.addEventListener('click', function(event) {
+          if (!matchesSelector(event.target, 'button')) return;
+          buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+          event.target.classList.add('is-checked');
+        });
+      });
     });
   }
-}
-
-document.addEventListener('DOMContentLoaded', mobilePortfolioFix);
-window.addEventListener('resize', mobilePortfolioFix);
+});
 
 // CounterUp Activation
 const wrapper = document.getElementById("funfactId");
