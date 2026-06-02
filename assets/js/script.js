@@ -183,7 +183,7 @@ if(isotopeGrid){
       itemSelector: '.element-item',
       percentPosition: true,
       masonry: {
-        columnWidth: ".element-item"
+        columnWidth: window.innerWidth <= 768 ? isotopeGrid.offsetWidth : ".element-item"
       }
     });
 
