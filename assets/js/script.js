@@ -177,70 +177,70 @@ function handleBodyClick(evt) {
 
 const isotopeGrid = document.querySelector(".portfolio__grid");
 if(isotopeGrid){
-  imagesLoaded(isotopeGrid, function( instance ) {
-    function getIsoOptions() {
-      return {
+  if (window.innerWidth <= 768) {
+    // Skip Isotope on mobile, just show all items stacked
+    document.querySelectorAll('.portfolio__grid .element-item').forEach(function(el) {
+      el.style.cssText = 'width:100% !important; position:relative !important; left:0 !important; top:0 !important; transform:none !important; display:block !important;';
+    });
+    isotopeGrid.style.cssText = 'height:auto !important; position:relative !important;';
+  } else {
+    // Run Isotope only on desktop
+    imagesLoaded(isotopeGrid, function( instance ) {
+      // init Isotope
+      var iso = new Isotope(isotopeGrid, {
         itemSelector: '.element-item',
         percentPosition: true,
         masonry: {
-          columnWidth: window.innerWidth <= 768 ? isotopeGrid.offsetWidth : ".element-item"
+          columnWidth: ".element-item"
+        }
+      });
+
+      // filter functions
+      var filterFns = {
+        // show if number is greater than 50
+        numberGreaterThan50: function( itemElem ) {
+          var number = itemElem.querySelector('.number').textContent;
+          return parseInt( number, 10 ) > 50;
+        },
+        // show if name ends with -ium
+        ium: function( itemElem ) {
+          var name = itemElem.querySelector('.name').textContent;
+          return name.match( /ium$/ );
         }
       };
-    }
-    // init Isotope
-    var iso = new Isotope(isotopeGrid, getIsoOptions());
-    window.addEventListener('resize', function() {
-      iso.options.masonry.columnWidth = window.innerWidth <= 768 ? isotopeGrid.offsetWidth : ".element-item";
-      iso.layout();
-    });
 
-    // filter functions
-    var filterFns = {
-      // show if number is greater than 50
-      numberGreaterThan50: function( itemElem ) {
-        var number = itemElem.querySelector('.number').textContent;
-        return parseInt( number, 10 ) > 50;
-      },
-      // show if name ends with -ium
-      ium: function( itemElem ) {
-        var name = itemElem.querySelector('.name').textContent;
-        return name.match( /ium$/ );
-      }
-    };
-
-    // bind filter button click
-    var filtersElem = document.querySelector('.filters-button-group');
-    filtersElem.addEventListener( 'click', function( event ) {
-      // only work with buttons
-      if ( !matchesSelector( event.target, 'button' ) ) {
-        return;
-      }
-      var filterValue = event.target.getAttribute('data-filter');
-      // use matching filter function
-      filterValue = filterFns[ filterValue ] || filterValue;
-      iso.arrange({ filter: filterValue });
-    });
-
-    // change is-checked class on buttons
-    var buttonGroups = document.querySelectorAll('.button-group');
-    for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-      var buttonGroup = buttonGroups[i];
-      radioButtonGroup( buttonGroup );
-    }
-
-    function radioButtonGroup( buttonGroup ) {
-      buttonGroup.addEventListener( 'click', function( event ) {
+      // bind filter button click
+      var filtersElem = document.querySelector('.filters-button-group');
+      filtersElem.addEventListener( 'click', function( event ) {
         // only work with buttons
         if ( !matchesSelector( event.target, 'button' ) ) {
           return;
         }
-        buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-        event.target.classList.add('is-checked');
+        var filterValue = event.target.getAttribute('data-filter');
+        // use matching filter function
+        filterValue = filterFns[ filterValue ] || filterValue;
+        iso.arrange({ filter: filterValue });
       });
-    }
-  });
-  
 
+      // change is-checked class on buttons
+      var buttonGroups = document.querySelectorAll('.button-group');
+      for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+        var buttonGroup = buttonGroups[i];
+        radioButtonGroup( buttonGroup );
+      }
+
+      function radioButtonGroup( buttonGroup ) {
+        buttonGroup.addEventListener( 'click', function( event ) {
+          // only work with buttons
+          if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+          }
+          buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+          event.target.classList.add('is-checked');
+        });
+      }
+    });
+  }
 }
 
 
