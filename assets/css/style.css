@@ -6827,8 +6827,8 @@ blockquote::before {
     white-space: normal;
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     color: #ffffff;
   }
   .ways-tag::before {
