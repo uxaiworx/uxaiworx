@@ -6862,7 +6862,7 @@ blockquote::before {
   }
   .ways-tag {
     position: relative;
-    background: transparent !important;
+    background: rgba(30, 30, 30, 0.85) !important;
     border: none !important;
     border-radius: 0 !important;
     backdrop-filter: none !important;
@@ -6874,6 +6874,7 @@ blockquote::before {
     align-items: center;
     font-size: 1.2rem;
     font-weight: 800;
+    color: #ffffff !important;
   }
   .ways-tag::before {
     content: attr(data-num);
