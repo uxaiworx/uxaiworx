@@ -641,10 +641,10 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/Port-Tamarack-730.jpg"
                            data-modal-client="The Club at Tamarack"
                            data-modal-project="Website"
-                           data-modal-objective=""
+                           data-modal-objective="Member Sales &amp; Services"
                            data-modal-preview="clubtamarack.com"
                            data-modal-software="HTML, CSS, Java"
-                           data-modal-desc="Ski resort members portal and digital experience.">
+                           data-modal-desc="The design required an intuitive experience accessible to all age groups, with clear information architecture guiding members directly to services, events, and portal access without friction. The solution applied structured navigation, strong visual signifiers, and affordance-driven layout to reduce cognitive load and support both prospective and current members seamlessly.">
                             <div class="portfolio__image--card">
                                 <img src="assets/img/other/Port-Tamarack-370.jpg" alt="The Club at Tamarack">
                             </div>
@@ -1206,13 +1206,13 @@ if (localStorage.getItem("theme-color") === "dark") {
             <button type="button" class="btn-close portfolio__modal--colse" data-bs-dismiss="modal" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
+            <a class="portfolio__modal--link" target="_blank" rel="noopener noreferrer" title="Visit Site" style="display:none;"><i class="ri-global-line"></i> Link</a>
             <div class="modal-body p-4">
               <h5 class="portfolio__modal--title"></h5>
               <div class="portfolio__modal--meta">
                 <span class="portfolio__modal--meta-item"><span class="meta-label">Client:</span> <span class="portfolio__modal--client"></span></span>
                 <span class="portfolio__modal--meta-item"><span class="meta-label">Project:</span> <span class="portfolio__modal--project"></span></span>
                 <span class="portfolio__modal--meta-item"><span class="meta-label">Objective:</span> <span class="portfolio__modal--objective"></span></span>
-                <a class="portfolio__modal--preview portfolio__modal--meta-item" target="_blank" rel="noopener noreferrer" style="display:none;"><span class="meta-label">Preview</span></a>
               </div>
               <p class="portfolio__modal--result"><span class="meta-label">Result:</span> <span class="portfolio__modal--result-text"></span></p>
               <div class="portfolio__modal--info__media">
@@ -1387,7 +1387,7 @@ if (portfolioModal) {
     if (project)   portfolioModal.querySelector('.portfolio__modal--project').textContent = project;
     if (objective) portfolioModal.querySelector('.portfolio__modal--objective').textContent = objective;
     if (desc)      portfolioModal.querySelector('.portfolio__modal--result-text').textContent = desc;
-    var previewLink = portfolioModal.querySelector('.portfolio__modal--preview');
+    var previewLink = portfolioModal.querySelector('.portfolio__modal--link');
     if (preview) {
       previewLink.href = 'https://' + preview;
       previewLink.style.display = '';
