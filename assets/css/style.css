@@ -4417,6 +4417,12 @@ blockquote::before {
   overflow: hidden;
 }
 
+.portfolio__card a.display-block {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
 .portfolio__card::before {
   position: absolute;
   content: "";
@@ -4509,6 +4515,17 @@ blockquote::before {
   .portfolio__content {
     bottom: 2.5rem;
   }
+}
+
+.portfolio__content::after {
+  content: "View Project";
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .portfolio__zoom {
