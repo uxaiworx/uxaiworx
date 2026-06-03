@@ -27,11 +27,8 @@ gtag('config', 'G-DLYHZ7RFDE');
 <!-- Rtl css here -->
 <link rel="stylesheet" href="assets/css/rtl.css">
 <script>
-if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+if (localStorage.getItem("theme-color") === "dark") {
     document.documentElement.classList.add("dark");
-}
-if (localStorage.getItem("theme-color") === "light") {
-    document.documentElement.classList.remove("dark");
 }
 </script>
 </head>
