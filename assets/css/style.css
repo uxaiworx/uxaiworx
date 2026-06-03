@@ -6909,6 +6909,16 @@ blockquote::before {
     color: #ffffff !important;
     opacity: 0.07 !important;
   }
+  html:not(.dark) .ways-tag {
+    color: #1a1a1a !important;
+  }
+  html:not(.dark) .ways-tag span {
+    color: #1a1a1a !important;
+  }
+  html:not(.dark) .ways-tag::before {
+    color: #333333 !important;
+    opacity: 0.06 !important;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -6949,6 +6959,16 @@ blockquote::before {
   }
   .dark .ways-tag span {
     color: #ffffff !important;
+  }
+  html:not(.dark) .ways-tag {
+    color: #1a1a1a !important;
+  }
+  html:not(.dark) .ways-tag span {
+    color: #1a1a1a !important;
+  }
+  html:not(.dark) .ways-tag::before {
+    color: #333333 !important;
+    opacity: 0.06 !important;
   }
 }
 
