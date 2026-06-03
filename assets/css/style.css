@@ -7321,18 +7321,24 @@ blockquote::before {
   text-align: right;
 }
 
+.portfolio__modal--info__media {
+  overflow-y: auto;
+  max-height: 970px;
+}
+
 .portfolio__modal--info__media img {
   width: 100%;
-  max-width: 730px;
   height: auto;
-  aspect-ratio: 730 / 366;
+  max-height: 970px;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
-  .portfolio__modal--img {
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
+  .portfolio__modal--info__media {
+    max-height: 500px;
+  }
+  .portfolio__modal--info__media img {
+    max-height: 500px;
   }
 }
 
