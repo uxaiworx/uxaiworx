@@ -6833,25 +6833,25 @@ blockquote::before {
   z-index: 1;
 }
 .ways-tag {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
   border-radius: 50px;
   padding: 12px 28px;
-  color: #ffffff;
   font-weight: 600;
   font-size: 1.1rem;
   display: inline-block;
   white-space: nowrap;
-  width: auto !important;
 }
 
-body.light .ways-tag {
-  background: rgba(0, 0, 0, 0.06) !important;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
-  color: #1a1a1a !important;
+.dark .ways-tag {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
 @media (max-width: 768px) {
   .brand__section .d-flex {
@@ -6896,12 +6896,15 @@ body.light .ways-tag {
     width: 140%;
     opacity: 0.04 !important;
   }
-  body.light .ways-tag span {
-    color: #1a1a1a !important;
+}
+
+@media (max-width: 768px) {
+  .dark .ways-tag span {
+    color: #ffffff !important;
   }
-  body.light .ways-tag::before {
-    color: #333333 !important;
-    opacity: 0.08 !important;
+  .dark .ways-tag::before {
+    color: #ffffff !important;
+    opacity: 0.07 !important;
   }
 }
 
