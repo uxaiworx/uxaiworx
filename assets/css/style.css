@@ -4710,6 +4710,26 @@ blockquote::before {
   margin-bottom: 20px;
 }
 
+.modal__scroll-hint {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+  margin-bottom: 8px;
+}
+.modal__scroll-hint svg {
+  width: 28px;
+  height: 28px;
+  color: #555555;
+  animation: scrollBlink 1.8s ease-in-out infinite;
+}
+.dark .modal__scroll-hint svg {
+  color: #aaaaaa;
+}
+@keyframes scrollBlink {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.2; transform: translateY(6px); }
+}
+
 .modal {
   overflow: hidden !important;
 }
