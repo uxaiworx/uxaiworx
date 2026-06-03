@@ -24,6 +24,7 @@ gtag('config', 'G-DLYHZ7RFDE');
 <link rel="stylesheet" href="assets/css/style.css">
 <!-- Dark css here -->
 <link rel="stylesheet" href="assets/css/dark.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 <!-- Rtl css here -->
 <link rel="stylesheet" href="assets/css/rtl.css">
 <script>
@@ -640,6 +641,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/Port-Tamarack-730.jpg"
                            data-modal-client="The Club at Tamarack"
                            data-modal-project="Website"
+                           data-modal-objective=""
                            data-modal-preview="clubtamarack.com"
                            data-modal-software="HTML, CSS, Java"
                            data-modal-desc="Ski resort members portal and digital experience.">
@@ -665,6 +667,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/Port-Tribune-730.jpg"
                            data-modal-client="Tribune Tower Shops"
                            data-modal-project="Website"
+                           data-modal-objective=""
                            data-modal-preview="tribunetowershops.com"
                            data-modal-software="Custom WordPress, CSS Animations"
                            data-modal-desc="Iconic landmark real estate digital presence.">
@@ -690,6 +693,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/Port-PC-730.jpg"
                            data-modal-client="PracticeCompass"
                            data-modal-project="SaaS"
+                           data-modal-objective=""
                            data-modal-preview="practicecompass.com"
                            data-modal-software="HTML, CSS, SaaS Integration"
                            data-modal-desc="Medical SaaS website design and user experience.">
@@ -715,6 +719,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/portfolio7.png"
                            data-modal-client="University of Chicago"
                            data-modal-project="WebApp"
+                           data-modal-objective=""
                            data-modal-preview=""
                            data-modal-software="HTML, CSS, Java"
                            data-modal-desc="Consult and surgical dashboard web application.">
@@ -740,6 +745,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/Port-Ciroc-730.png"
                            data-modal-client="Diageo / Ciroc"
                            data-modal-project="Website"
+                           data-modal-objective=""
                            data-modal-preview=""
                            data-modal-software="HTML, CSS, Video.js"
                            data-modal-desc="Designed a five city launch microsite for Diageo's Ciroc brand, balancing premium sophistication with authentic street credibility. Deep research informed the color palette and imagery direction. Landing pages were crafted with clear visual hierarchy, scannable content structure, and intentional whitespace to guide users through the brand narrative without friction.">
@@ -765,6 +771,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/portfolio9.png"
                            data-modal-client="Land of Frost"
                            data-modal-project="Mobile App"
+                           data-modal-objective=""
                            data-modal-preview=""
                            data-modal-software="Figma, HTML, CSS"
                            data-modal-desc="Gaming engine built for in-store retail campaign.">
@@ -790,6 +797,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/portfolio10.png"
                            data-modal-client="Aspire"
                            data-modal-project="Mobile App"
+                           data-modal-objective=""
                            data-modal-preview=""
                            data-modal-software="Adobe XD, HTML"
                            data-modal-desc="LMS mobile app designed for B2B training delivery.">
@@ -815,6 +823,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/Port-FF-730.png"
                            data-modal-client="Famous Footwear"
                            data-modal-project="Mobile App"
+                           data-modal-objective=""
                            data-modal-preview=""
                            data-modal-software="Figma, HTML, CSS, Kontakt Engine"
                            data-modal-desc="Designed an instant win mobile game UI for 51 grand opening locations nationwide. The challenge was creating an engaging hidden image reveal interface that felt rewarding without showing the prize, driving users to visit in store. Geolocation integration required a frictionless UX that worked across all mobile devices with zero learning curve.">
@@ -840,6 +849,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                            data-modal-img="assets/img/other/portfolio13.png"
                            data-modal-client="Synegen"
                            data-modal-project="Website"
+                           data-modal-objective=""
                            data-modal-preview=""
                            data-modal-software="HTML, CSS, Angular/SPAs"
                            data-modal-desc="LMS company marketing website.">
@@ -1197,17 +1207,12 @@ if (localStorage.getItem("theme-color") === "dark") {
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
             <div class="modal-body p-4">
-              <h5 class="portfolio__modal--title">Title</h5>
+              <h5 class="portfolio__modal--title"></h5>
               <div class="portfolio__modal--meta">
-                <span class="portfolio__modal--meta-item">
-                  <i class="ri-user-line"></i> <span class="portfolio__modal--client"></span>
-                </span>
-                <span class="portfolio__modal--meta-item">
-                  <i class="ri-code-line"></i> <span class="portfolio__modal--project"></span>
-                </span>
-                <a class="portfolio__modal--preview portfolio__modal--meta-item" target="_blank" rel="noopener noreferrer">
-                  <i class="ri-external-link-line"></i> Preview
-                </a>
+                <span class="portfolio__modal--meta-item"><span class="meta-label">Client:</span> <span class="portfolio__modal--client"></span></span>
+                <span class="portfolio__modal--meta-item"><span class="meta-label">Project:</span> <span class="portfolio__modal--project"></span></span>
+                <span class="portfolio__modal--meta-item"><span class="meta-label">Objective:</span> <span class="portfolio__modal--objective"></span></span>
+                <a class="portfolio__modal--preview portfolio__modal--meta-item" target="_blank" rel="noopener noreferrer" style="display:none;"><span class="meta-label">Preview</span></a>
               </div>
               <p class="portfolio__modal--info__desc"></p>
               <div class="portfolio__modal--info__media">
@@ -1369,17 +1374,19 @@ if (portfolioModal) {
   portfolioModal.addEventListener('show.bs.modal', function(event) {
     var trigger = event.relatedTarget;
     if (!trigger) return;
-    var title   = trigger.getAttribute('data-modal-title');
-    var img     = trigger.getAttribute('data-modal-img');
-    var client  = trigger.getAttribute('data-modal-client');
-    var project = trigger.getAttribute('data-modal-project');
-    var preview = trigger.getAttribute('data-modal-preview');
-    var desc    = trigger.getAttribute('data-modal-desc');
-    if (title)   portfolioModal.querySelector('.portfolio__modal--title').textContent = title;
-    if (img)     portfolioModal.querySelector('.portfolio__modal--info__media img').src = img;
-    if (client)  portfolioModal.querySelector('.portfolio__modal--client').textContent = client;
-    if (project) portfolioModal.querySelector('.portfolio__modal--project').textContent = project;
-    if (desc)    portfolioModal.querySelector('.portfolio__modal--info__desc').textContent = desc;
+    var title     = trigger.getAttribute('data-modal-title');
+    var img       = trigger.getAttribute('data-modal-img');
+    var client    = trigger.getAttribute('data-modal-client');
+    var project   = trigger.getAttribute('data-modal-project');
+    var objective = trigger.getAttribute('data-modal-objective');
+    var preview   = trigger.getAttribute('data-modal-preview');
+    var desc      = trigger.getAttribute('data-modal-desc');
+    if (title)     portfolioModal.querySelector('.portfolio__modal--title').textContent = title;
+    if (img)       portfolioModal.querySelector('.portfolio__modal--info__media img').src = img;
+    if (client)    portfolioModal.querySelector('.portfolio__modal--client').textContent = client;
+    if (project)   portfolioModal.querySelector('.portfolio__modal--project').textContent = project;
+    if (objective) portfolioModal.querySelector('.portfolio__modal--objective').textContent = objective;
+    if (desc)      portfolioModal.querySelector('.portfolio__modal--info__desc').textContent = desc;
     var previewLink = portfolioModal.querySelector('.portfolio__modal--preview');
     if (preview) {
       previewLink.href = 'https://' + preview;

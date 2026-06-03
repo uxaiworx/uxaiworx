@@ -4644,27 +4644,34 @@ blockquote::before {
 
 .portfolio__modal--meta {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px 32px;
   font-size: 10pt;
   font-weight: 400;
   margin-bottom: 12px;
-  flex-wrap: wrap;
 }
 
 .portfolio__modal--meta-item {
-  display: flex;
+  display: inline-flex;
+  gap: 4px;
   align-items: center;
-  gap: 6px;
-  font-size: 10pt;
 }
 
-.portfolio__modal--meta i {
-  font-size: 14px;
+.meta-label {
+  font-weight: 600;
+  color: #e05c2e;
 }
 
 .portfolio__modal--preview {
   text-decoration: underline;
   color: inherit;
+}
+
+@media (max-width: 768px) {
+  .portfolio__modal--meta {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 .portfolio__modal--info__desc {
