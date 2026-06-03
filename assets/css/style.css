@@ -4635,69 +4635,54 @@ blockquote::before {
 }
 
 .portfolio__modal--title {
-  font-size: 2.2rem;
-  line-height: 2.4rem;
-  color: var(--secondary-color);
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #e05c2e;
 }
 
-@media only screen and (min-width: 480px) {
-  .portfolio__modal--title {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
+.portfolio__modal--meta {
+  display: flex;
+  gap: 24px;
+  font-size: 10pt;
+  font-weight: 400;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 768px) {
-  .portfolio__modal--title {
-    font-size: 2.8rem;
-    line-height: 3.2rem;
-  }
+.portfolio__modal--meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10pt;
 }
 
-@media only screen and (min-width: 1200px) {
-  .portfolio__modal--title {
-    font-size: 3.2rem;
-    line-height: 3.6rem;
-  }
+.portfolio__modal--meta i {
+  font-size: 14px;
 }
 
-.portfolio__modal--info {
-  gap: 2rem;
-}
-
-@media only screen and (max-width: 767px) {
-  .portfolio__modal--info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
-  }
-}
-
-.portfolio__modal--info--text {
-  font-size: 1.6rem;
-  line-height: 2rem;
-  margin-bottom: 1.2rem;
-}
-
-.portfolio__modal--info--text:last-child {
-  margin-bottom: 0;
-}
-
-.portfolio__modal--info__icon {
-  margin-right: 1rem;
+.portfolio__modal--preview {
+  text-decoration: underline;
+  color: inherit;
 }
 
 .portfolio__modal--info__desc {
-  font-size: 1.6rem;
+  font-size: 10pt;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
-.portfolio__modal--info__name {
-  font-weight: 600;
+.portfolio__modal--info__media {
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.portfolio__modal--info__media img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .portfolio__modal--colse {
