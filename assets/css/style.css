@@ -4709,6 +4709,15 @@ blockquote::before {
   margin-bottom: 20px;
 }
 
+.modal {
+  overflow: hidden !important;
+}
+
+.modal-body {
+  overflow-y: auto;
+  max-height: 85vh;
+}
+
 .portfolio__modal--colse {
   position: absolute;
   width: 3rem;
