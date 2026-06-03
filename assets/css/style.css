@@ -6847,6 +6847,12 @@ blockquote::before {
   white-space: nowrap;
   width: auto !important;
 }
+
+body.light .ways-tag {
+  background: rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  color: #1a1a1a !important;
+}
 @media (max-width: 768px) {
   .brand__section .d-flex {
     display: grid !important;
@@ -6889,6 +6895,13 @@ blockquote::before {
   .keyboard-bg {
     width: 140%;
     opacity: 0.04 !important;
+  }
+  body.light .ways-tag span {
+    color: #1a1a1a !important;
+  }
+  body.light .ways-tag::before {
+    color: #333333 !important;
+    opacity: 0.08 !important;
   }
 }
 
