@@ -4675,11 +4675,11 @@ blockquote::before {
 }
 
 .portfolio__modal--result {
-  margin-top: 30px;
+  margin-top: 12px;
   font-size: 10pt;
   font-weight: 400;
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .portfolio__modal--result .meta-label {
@@ -4699,15 +4699,14 @@ blockquote::before {
 }
 
 .portfolio__modal--link {
-  position: absolute;
-  top: 16px;
-  right: 60px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 10pt;
   text-decoration: underline;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  color: #e05c2e;
+  margin-top: 12px;
+  margin-bottom: 20px;
 }
 
 .portfolio__modal--colse {
