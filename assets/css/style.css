@@ -6862,7 +6862,6 @@ blockquote::before {
   }
   .ways-tag {
     position: relative;
-    background: rgba(30, 30, 30, 0.85) !important;
     border: none !important;
     border-radius: 0 !important;
     backdrop-filter: none !important;
