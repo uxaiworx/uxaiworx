@@ -1214,7 +1214,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                 <span class="portfolio__modal--meta-item"><span class="meta-label">Objective:</span> <span class="portfolio__modal--objective"></span></span>
                 <a class="portfolio__modal--preview portfolio__modal--meta-item" target="_blank" rel="noopener noreferrer" style="display:none;"><span class="meta-label">Preview</span></a>
               </div>
-              <p class="portfolio__modal--info__desc"></p>
+              <p class="portfolio__modal--result"><span class="meta-label">Result:</span> <span class="portfolio__modal--result-text"></span></p>
               <div class="portfolio__modal--info__media">
                 <img src="assets/img/other/portfolio-big1.png" alt="img">
               </div>
@@ -1386,7 +1386,7 @@ if (portfolioModal) {
     if (client)    portfolioModal.querySelector('.portfolio__modal--client').textContent = client;
     if (project)   portfolioModal.querySelector('.portfolio__modal--project').textContent = project;
     if (objective) portfolioModal.querySelector('.portfolio__modal--objective').textContent = objective;
-    if (desc)      portfolioModal.querySelector('.portfolio__modal--info__desc').textContent = desc;
+    if (desc)      portfolioModal.querySelector('.portfolio__modal--result-text').textContent = desc;
     var previewLink = portfolioModal.querySelector('.portfolio__modal--preview');
     if (preview) {
       previewLink.href = 'https://' + preview;

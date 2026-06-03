@@ -4674,11 +4674,16 @@ blockquote::before {
   }
 }
 
-.portfolio__modal--info__desc {
+.portfolio__modal--result {
   font-size: 10pt;
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 16px;
+}
+
+.portfolio__modal--result .meta-label {
+  font-weight: 600;
+  color: #e05c2e;
 }
 
 .portfolio__modal--info__media {
