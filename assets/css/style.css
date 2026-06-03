@@ -6899,6 +6899,9 @@ blockquote::before {
 }
 
 @media (max-width: 768px) {
+  .dark .ways-tag {
+    color: #ffffff !important;
+  }
   .dark .ways-tag span {
     color: #ffffff !important;
   }
@@ -6940,6 +6943,12 @@ blockquote::before {
   .ways-tag span {
     position: relative;
     z-index: 1;
+  }
+  .dark .ways-tag {
+    color: #ffffff !important;
+  }
+  .dark .ways-tag span {
+    color: #ffffff !important;
   }
 }
 
