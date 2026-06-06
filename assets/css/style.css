@@ -7371,3 +7371,19 @@ blockquote::before {
   max-height: 600px;
 }
 
+
+.portfolio__card--custom {
+  position: relative;
+}
+.figma-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: white;
+  border-radius: 6px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 2;
+}
