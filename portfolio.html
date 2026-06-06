@@ -884,7 +884,7 @@ if (localStorage.getItem("theme-color") === "dark") {
         <div class="portfolio__grid--custom">
 
             <!-- Card 1 -->
-            <div class="portfolio__card--custom" data-src="assets/pdf/modeva-ux-report.pdf" data-type="pdf">
+            <div class="portfolio__card--custom" data-src="assets/pdf/modreva-ux-report.pdf" data-type="pdf">
                 <div class="portfolio__card--inner">
                     <span class="portfolio__pill">UX Research</span>
                     <div class="portfolio__thumb">
@@ -903,7 +903,7 @@ if (localStorage.getItem("theme-color") === "dark") {
             </div>
 
             <!-- Card 2 -->
-            <div class="portfolio__card--custom" data-src="assets/pdf/modeva-wireframes.pdf" data-type="pdf">
+            <div class="portfolio__card--custom" data-src="assets/pdf/modreva-wire-frames.pdf" data-type="pdf">
                 <div class="portfolio__card--inner">
                     <span class="portfolio__pill">Wireframes</span>
                     <div class="portfolio__thumb">
@@ -922,7 +922,7 @@ if (localStorage.getItem("theme-color") === "dark") {
             </div>
 
             <!-- Card 3 -->
-            <div class="portfolio__card--custom" data-src="assets/pdf/modeva-prototype.pdf" data-type="pdf">
+            <div class="portfolio__card--custom" data-src="assets/pdf/modreva-ui-prototype.pdf" data-type="pdf">
                 <div class="portfolio__card--inner">
                     <span class="portfolio__pill">Prototype</span>
                     <div class="portfolio__thumb">
@@ -941,7 +941,7 @@ if (localStorage.getItem("theme-color") === "dark") {
             </div>
 
             <!-- Card 4 -->
-            <div class="portfolio__card--custom" data-src="assets/pdf/letsbook-ui.pdf" data-type="pdf">
+            <div class="portfolio__card--custom" data-src="https://www.figma.com/design/ol03iZq4wjvv6W2pmaokC5/Let-s-Book--Final?node-id=0-1&t=m56DMRmAM0E1Hg7c-1" data-type="link">
                 <div class="portfolio__card--inner">
                     <span class="portfolio__pill">UI Design</span>
                     <div class="portfolio__thumb">
@@ -960,7 +960,7 @@ if (localStorage.getItem("theme-color") === "dark") {
             </div>
 
             <!-- Card 5 -->
-            <div class="portfolio__card--custom" data-src="assets/pdf/yahoo-case-study.pdf" data-type="pdf">
+            <div class="portfolio__card--custom" data-src="assets/pdf/Yahoo-News-UX-Redesign.pdf" data-type="pdf">
                 <div class="portfolio__card--inner">
                     <span class="portfolio__pill">Case Study</span>
                     <div class="portfolio__thumb">
@@ -978,7 +978,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                 </div>
             </div>
             <!-- Card 6 -->
-<div class="portfolio__card--custom" data-src="assets/pdf/aspire-app.pdf" data-type="pdf">
+<div class="portfolio__card--custom" data-src="assets/video/aspire-app.mp4" data-type="video">
     <div class="portfolio__card--inner">
         <span class="portfolio__pill">UI Design</span>
         <div class="portfolio__thumb">
@@ -1027,6 +1027,19 @@ if (localStorage.getItem("theme-color") === "dark") {
         card.addEventListener('click', function() {
             const src = this.dataset.src;
             const type = this.dataset.type;
+
+            if (type === 'link') {
+                window.open(src, '_blank');
+                return;
+            }
+
+            if (type === 'video') {
+                var video = document.getElementById('modalVideoIframe');
+                video.src = src;
+                var modal = new bootstrap.Modal(document.getElementById('videoModal'));
+                modal.show();
+                return;
+            }
 
             if (type === 'pdf') {
                 content.innerHTML = `<iframe src="${src}" style="width:100%;height:85vh;border:none;border-radius:8px;"></iframe>`;
@@ -1427,6 +1440,12 @@ if (videoModal) {
 }
 </script>
 <script>
+document.querySelectorAll('.download__btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        window.open('assets/pdf/resume.pdf', '_blank');
+    });
+});
+
 const form = document.querySelector('.contact__form');
 form.addEventListener('submit', async function(e) {
     e.preventDefault();
