@@ -7389,6 +7389,18 @@ blockquote::before {
   z-index: 2;
 }
 
+.blog__read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e05c2e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.blog__read-more:hover {
+  text-decoration: underline;
+}
+
 .play-badge {
   position: absolute;
   top: 12px;
