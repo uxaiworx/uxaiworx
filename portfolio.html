@@ -1436,8 +1436,10 @@ var videoModal = document.getElementById('videoModal');
 if (videoModal) {
   videoModal.addEventListener('hide.bs.modal', function () {
     var video = document.getElementById('modalVideoIframe');
+    var source = video.querySelector('source');
     video.pause();
-    video.currentTime = 0;
+    source.src = '';
+    video.load();
   });
   videoModal.addEventListener('show.bs.modal', function () {
     var video = document.getElementById('modalVideoIframe');
