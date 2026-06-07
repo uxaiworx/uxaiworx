@@ -7422,7 +7422,7 @@ blockquote::before {
 }
 
 @media (max-width: 768px) {
-  .portfolio__filter {
+  .filters-button-group {
     display: none !important;
   }
 }
