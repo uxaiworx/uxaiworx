@@ -168,7 +168,7 @@ if (localStorage.getItem("theme-color") === "dark") {
                         <h3 class="hero__content--subtitle2 mb-20">UX/UI Designer | AI-Driven Workflow</h3>
                         <p class="hero__content--desc mb-30">Combining human centered creative strategy with AI enhanced workflows to accelerate research, interface exploration, rapid prototyping, and scalable UX delivery.</p>
                         <div class="hero__content--footer d-flex align-items-center">
-                          <a class="btn hero__content--btn" href="#" data-bs-toggle="modal" data-bs-target="#videoModal">INTRO VIDEO</a>
+                          <a class="btn hero__content--btn" href="#" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="intro">INTRO VIDEO</a>
                             <div class="social__share d-flex align-items-center">
                                 <span class="social__share--title">Follow Me on LinkedIn: </span>
                                 <ul class="social__share--wrapper d-flex">
@@ -1441,18 +1441,20 @@ if (videoModal) {
     source.src = '';
     video.load();
   });
-  videoModal.addEventListener('show.bs.modal', function () {
+  videoModal.addEventListener('show.bs.modal', function(event) {
+    var trigger = event.relatedTarget;
     var video = document.getElementById('modalVideoIframe');
     var source = video.querySelector('source');
-    source.src = 'assets/video/intro2.mp4';
-    video.muted = false;
-    video.load();
-    var playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(function() {
-        // Autoplay blocked - user can press play manually
-        video.controls = true;
-      });
+    if (trigger && trigger.getAttribute('data-video') === 'intro') {
+      source.src = 'assets/video/intro2.mp4';
+      video.muted = false;
+      video.load();
+      var playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function() {
+          video.controls = true;
+        });
+      }
     }
   });
 }
