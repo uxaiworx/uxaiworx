@@ -7394,8 +7394,14 @@ blockquote::before {
   margin-top: 10px;
   color: #e05c2e;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
+}
+.blog__read-more::before {
+  content: '[';
+}
+.blog__read-more::after {
+  content: ']';
 }
 .blog__read-more:hover {
   text-decoration: underline;
