@@ -1590,6 +1590,17 @@ document.getElementById('modalScrollHint').addEventListener('click', function() 
   </div>
 </div>
 
+<script>
+document.querySelectorAll('.download__btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    gtag('event', 'resume_download', {
+      'event_category': 'engagement',
+      'event_label': 'Resume PDF'
+    });
+  });
+});
+</script>
+
 </body>
 </html>
 

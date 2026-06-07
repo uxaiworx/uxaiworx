@@ -296,10 +296,18 @@
         var hex = Array.from(new Uint8Array(buf)).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
         if (hex === HASH) {
           sessionStorage.setItem('cs_unlocked','1');
+          gtag('event', 'gate_access', {
+            'event_category': 'engagement',
+            'event_label': 'Password Gate Unlocked'
+          });
           gate.classList.add('hide');
           setTimeout(function(){ gate.style.display='none'; }, 650);
         } else {
           err.textContent = 'Incorrect password.';
+          gtag('event', 'gate_failed', {
+            'event_category': 'engagement',
+            'event_label': 'Wrong Password Attempt'
+          });
           input.classList.add('error');
           setTimeout(function(){ input.classList.remove('error'); err.textContent=''; }, 1200);
           input.select();
