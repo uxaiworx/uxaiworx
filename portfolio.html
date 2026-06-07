@@ -1026,43 +1026,50 @@ if (localStorage.getItem("theme-color") === "dark") {
 <!-- Portfolio Lightbox JS -->
 <script>
 (function() {
-    const cards = document.querySelectorAll('.portfolio__card--custom');
     const lightbox = document.getElementById('portfolioLightbox');
     const content = lightbox.querySelector('.portfolio__lightbox--content');
     const closeBtn = lightbox.querySelector('.portfolio__lightbox--close');
     const overlay = lightbox.querySelector('.portfolio__lightbox--overlay');
 
+    const cards = document.querySelectorAll('.portfolio__card--custom');
     cards.forEach(card => {
-        card.addEventListener('click', function() {
-            const src = this.dataset.src;
-            const type = this.dataset.type;
+      card.addEventListener('click', function() {
+        const src = this.getAttribute('data-src');
+        const type = this.getAttribute('data-type');
 
-            if (type === 'link') {
-                window.open(src, '_blank');
-                return;
-            }
+        const isMobile = window.innerWidth <= 768;
 
-            if (type === 'video') {
-                var video = document.getElementById('modalVideoIframe');
-                video.src = src;
-                var modal = new bootstrap.Modal(document.getElementById('videoModal'));
-                modal.show();
-                return;
-            }
+        if (type === 'link') {
+          window.open(src, '_blank');
+          return;
+        }
 
-            if (type === 'pdf') {
-                content.innerHTML = `<iframe src="${src}" style="width:100%;height:85vh;border:none;border-radius:8px;"></iframe>`;
-            } else {
-                content.innerHTML = `<img src="${src}" style="max-width:100%;max-height:85vh;border-radius:8px;display:block;margin:auto;">`;
-            }
+        if (type === 'video') {
+          const videoModal = document.getElementById('videoModal');
+          const video = document.getElementById('modalVideoIframe');
+          const source = video.querySelector('source');
+          source.src = src;
+          video.load();
+          const bsModal = new bootstrap.Modal(videoModal);
+          bsModal.show();
+          video.play().catch(() => {});
+          return;
+        }
 
-            lightbox.classList.add('is-open');
-            document.body.style.overflow = 'hidden';
-        });
+        if (type === 'pdf') {
+          if (isMobile) {
+            window.open(src, '_blank');
+          } else {
+            content.innerHTML = `<iframe src="${src}" style="width:100%;height:85vh;border:none;border-radius:8px;"></iframe>`;
+            lightbox.style.display = 'flex';
+          }
+        }
+      });
     });
 
     function closeLightbox() {
         lightbox.classList.remove('is-open');
+        lightbox.style.display = '';
         content.innerHTML = '';
         document.body.style.overflow = '';
     }
