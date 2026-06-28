@@ -27,6 +27,50 @@ if (localStorage.getItem("theme-color") === "dark") {
     document.documentElement.classList.add("dark");
 }
 </script>
+<style id="resume-modal-css">
+#resumeAccessModal { display:none; position:fixed; inset:0; z-index:99999; align-items:center; justify-content:center; }
+.resume-modal-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.72); }
+.resume-modal-card {
+    position:relative; z-index:1; background:#ffffff; border-radius:16px;
+    padding:48px 40px 40px; max-width:440px; width:90%;
+    box-shadow:0 8px 60px rgba(0,0,0,0.3);
+}
+html.dark .resume-modal-card { background:#16162a; color:#f0f0f0; }
+.resume-modal-close {
+    position:absolute; top:16px; right:20px; background:none; border:none;
+    font-size:1.6rem; cursor:pointer; color:inherit; opacity:0.5; line-height:1;
+}
+.resume-modal-close:hover { opacity:1; }
+.resume-modal-title { font-size:2.4rem; font-weight:700; margin:0 0 10px; }
+.resume-modal-sub { font-size:1.4rem; line-height:1.65; opacity:0.72; margin:0 0 24px; }
+.resume-modal-sub a { color:#E8563A; text-decoration:none; }
+.resume-modal-input {
+    display:block; width:100%; padding:14px 18px; font-size:1.6rem; font-weight:600;
+    letter-spacing:0.14em; text-transform:uppercase; border:2px solid rgba(128,128,128,0.28);
+    border-radius:8px; margin-bottom:10px; background:transparent; color:inherit;
+    outline:none; box-sizing:border-box; font-family:inherit;
+}
+html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
+.resume-modal-input:focus { border-color:#E8563A; }
+.resume-modal-error {
+    font-size:1.3rem; color:#E8563A; margin-bottom:10px; min-height:18px; display:none;
+}
+.resume-modal-btn {
+    display:block; width:100%; padding:14px; font-size:1.5rem; font-weight:700;
+    background:#E8563A; color:#fff; border:none; border-radius:50px;
+    cursor:pointer; letter-spacing:0.03em; transition:opacity 0.15s;
+}
+.resume-modal-btn:hover { opacity:0.88; }
+.resume-modal-btn:disabled { opacity:0.5; cursor:not-allowed; }
+.resume-modal-request-link { display:block; text-align:center; margin-top:14px; font-size:1.3rem; color:#E8563A; text-decoration:none; opacity:0.8; }
+.resume-modal-request-link:hover { opacity:1; }
+@keyframes resume-shake {
+    0%,100% { transform:translateX(0); }
+    20%,60%  { transform:translateX(-7px); }
+    40%,80%  { transform:translateX(7px); }
+}
+.resume-modal-input.shake { animation:resume-shake 0.4s ease; border-color:#E8563A; }
+</style>
 </head>
 
 <body class="bg-dark_primary_bg">
@@ -72,10 +116,10 @@ if (localStorage.getItem("theme-color") === "dark") {
                                 </ul>
                             </nav>
                         </div>
-                        <!-- <button class="primary__btn download__btn">
+                        <button class="primary__btn download__btn">
                             <svg class="download__btn--svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                             Download Resume
-                        </button> -->
+                        </button>
                     </div>
                 </div>
             </div>
@@ -102,10 +146,10 @@ if (localStorage.getItem("theme-color") === "dark") {
                     <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="portfolio.html#contact">Contact</a></li>
                 </ul>
                 <div class="offcanvas__download--btn">
-                    <!-- <button class="primary__btn download__btn">
+                    <button class="primary__btn download__btn">
                         <svg class="download__btn--svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         Download Resume
-                    </button> -->
+                    </button>
                 </div>
             </nav>
         </div>
@@ -217,5 +261,117 @@ if (localStorage.getItem("theme-color") === "dark") {
     });
     </script>
 
+<script>
+(function () {
+    // UPDATE this URL after running: wrangler deploy
+    var WORKER_URL = 'https://resume-gate.uxaiworx.workers.dev';
+
+    var modal      = document.getElementById('resumeAccessModal');
+    var overlay    = document.getElementById('resumeModalOverlay');
+    var closeBtn   = document.getElementById('resumeModalClose');
+    var input      = document.getElementById('resumeCodeInput');
+    var submitBtn  = document.getElementById('resumeModalSubmit');
+    var errorEl    = document.getElementById('resumeModalError');
+
+    var browserAttempts = 0;
+    var browserLocked   = false;
+
+    document.querySelectorAll('.download__btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            modal.style.display = 'flex';
+            input.value = '';
+            errorEl.style.display = 'none';
+            errorEl.textContent = '';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+            setTimeout(function () { input.focus(); }, 80);
+        });
+    });
+
+    function closeModal() { modal.style.display = 'none'; }
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+    input.addEventListener('input', function () {
+        this.value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+    });
+
+    function showError(msg) {
+        errorEl.textContent = msg;
+        errorEl.style.display = 'block';
+        input.classList.remove('shake');
+        void input.offsetWidth;
+        input.classList.add('shake');
+        input.addEventListener('animationend', function () { input.classList.remove('shake'); }, { once: true });
+    }
+
+    function lockBrowser() {
+        browserLocked = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Try again in 5 minutes';
+        setTimeout(function () {
+            browserLocked = false;
+            browserAttempts = 0;
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+        }, 5 * 60 * 1000);
+    }
+
+    async function submitCode() {
+        if (browserLocked) return;
+        var code = input.value.trim().toUpperCase();
+        if (!code) { showError('Please enter your access code.'); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Checking…';
+        errorEl.style.display = 'none';
+
+        try {
+            var res = await fetch(WORKER_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code: code })
+            });
+
+            if (res.status === 429) {
+                showError('Too many attempts. Please wait 5 minutes before trying again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+                return;
+            }
+
+            var data = await res.json();
+
+            if (data.valid) {
+                closeModal();
+                var a = document.createElement('a');
+                a.href = 'assets/pdf/resume.pdf';
+                a.download = 'Turk-Resume.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                browserAttempts = 0;
+            } else {
+                browserAttempts++;
+                showError('Invalid access code. Request one at hello@uxaiworx.com');
+                if (browserAttempts >= 3) {
+                    lockBrowser();
+                } else {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit';
+                }
+            }
+        } catch (err) {
+            showError('Connection error. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+        }
+    }
+
+    submitBtn.addEventListener('click', submitCode);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') submitCode(); });
+})();
+</script>
 </body>
 </html>
