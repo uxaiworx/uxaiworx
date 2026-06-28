@@ -91,7 +91,7 @@ export default {
             access_key: WEB3FORMS_KEY,
             subject: `Resume Download — Code ${code}`,
             from_name: 'UXAI worx Resume Gate',
-            email: 'hello@uxaiworx.com',
+            email: 'uxaiworx@gmail.com',
             message: `Access code "${code}" was used to download the resume.\nTimestamp: ${timestamp}`,
           }),
         });
