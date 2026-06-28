@@ -82,20 +82,24 @@ export default {
     if (VALID_CODES.has(code)) {
       const timestamp = new Date().toISOString();
 
-      // Notify via Web3Forms (non-blocking)
+      // Notify via Web3Forms
       try {
-        await fetch('https://api.web3forms.com/submit', {
+        const w3fRes = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             access_key: WEB3FORMS_KEY,
-            subject: `Resume Download — Code ${code}`,
+            subject: `Resume Download - Code ${code}`,
             from_name: 'UXAI worx Resume Gate',
             email: 'uxaiworx@gmail.com',
             message: `Access code "${code}" was used to download the resume.\nTimestamp: ${timestamp}`,
           }),
         });
-      } catch {}
+        const w3fBody = await w3fRes.text();
+        console.log(`Web3Forms response: ${w3fRes.status} - ${w3fBody}`);
+      } catch (err) {
+        console.error('Web3Forms fetch failed:', err);
+      }
 
       return new Response(JSON.stringify({ valid: true }), {
         headers: { ...cors, 'Content-Type': 'application/json' },
