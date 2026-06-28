@@ -24,7 +24,7 @@ const VALID_CODES = new Set([
 const ALLOWED_ORIGINS = ['https://uxaiworx.com', 'https://www.uxaiworx.com'];
 const WINDOW_MS = 5 * 60 * 1000;
 const MAX_ATTEMPTS = 3;
-const WEB3FORMS_KEY = '41cec85b-25c7-4a56-bcd6-a4b68a4365ff';
+const WEB3FORMS_KEY = '5b55fe36-ff32-4614-b93e-02291f1b7eaf';
 
 function corsHeaders(request) {
   const origin = request.headers.get('Origin') || '';
