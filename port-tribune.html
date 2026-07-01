@@ -227,11 +227,18 @@ if (localStorage.getItem("theme-color") === "light") {
     document.getElementById("light__to--dark")?.classList.remove("dark--version");
 }
 </script>
-<script>
-document.querySelectorAll('.download__btn').forEach(function(btn) {
-    btn.addEventListener('click', function() { window.open('assets/pdf/resume.pdf', '_blank'); });
-});
-</script>
+<div id="resumeAccessModal">
+    <div class="resume-modal-overlay" id="resumeModalOverlay"></div>
+    <div class="resume-modal-card">
+        <button class="resume-modal-close" id="resumeModalClose" aria-label="Close">&#x2715;</button>
+        <h2 class="resume-modal-title">Resume Access</h2>
+        <p class="resume-modal-sub">Enter your access code below or request one at <a href="mailto:hello@uxaiworx.com">hello@uxaiworx.com</a></p>
+        <input id="resumeCodeInput" class="resume-modal-input" type="text" placeholder="Enter access code" maxlength="8" autocomplete="off" spellcheck="false">
+        <div id="resumeModalError" class="resume-modal-error"></div>
+        <button id="resumeModalSubmit" class="resume-modal-btn">Submit</button>
+        <a href="mailto:hello@uxaiworx.com" class="resume-modal-request-link">Request an access code</a>
+    </div>
+</div>
 
 <script>
 (function () {
