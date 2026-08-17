@@ -5953,6 +5953,30 @@ blockquote::before {
   left: 67%;
 }
 
+.skills__field.width_40::after {
+  width: 40%;
+}
+
+.skills__field.width_50::after {
+  width: 50%;
+}
+
+.skills__field.width_65::after {
+  width: 65%;
+}
+
+.skills__count.width_40 {
+  left: 37%;
+}
+
+.skills__count.width_50 {
+  left: 47%;
+}
+
+.skills__count.width_65 {
+  left: 62%;
+}
+
 
 /*
     16. testimonial css
