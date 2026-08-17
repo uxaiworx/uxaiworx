@@ -7425,6 +7425,59 @@ blockquote::before {
   text-decoration: underline;
 }
 
+.intro-video__thumb {
+  position: relative;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.intro-video__thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.intro-video__thumb:hover img {
+  transform: scale(1.02);
+}
+
+.intro-video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.intro-video__thumb:hover .intro-video__play {
+  background: var(--secondary-color);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.intro-video__duration {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 .play-badge {
   position: absolute;
   top: 12px;

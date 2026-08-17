@@ -213,7 +213,6 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
                         <p class="hero__content--desc mb-20">I turn ambiguous business problems into strategies, working prototypes, and intelligent experiences teams can see, test, and build from.</p>
                         <p class="hero__content--desc mb-30">I work across business strategy, human behavior, product, emerging technology, and AI to move ideas from opportunity to measurable outcome.</p>
                         <div class="hero__content--footer d-flex align-items-center">
-                          <a class="btn hero__content--btn" href="#" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="intro">INTRO VIDEO</a>
                             <div class="social__share d-flex align-items-center">
                                 <span class="social__share--title">Follow Me on LinkedIn: </span>
                                 <ul class="social__share--wrapper d-flex">
@@ -231,6 +230,20 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
             </div>
         </div>
         <!-- End Hero section -->
+
+        <!-- Start intro video section -->
+        <section class="section--padding pb-0">
+            <div class="container">
+                <a href="#" class="intro-video__thumb" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="intro">
+                    <img src="assets/img/podcast-cover.png" alt="AI avatar podcast conversation, designer, architect, builder demo">
+                    <span class="intro-video__play">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 21,12 6,21"/></svg>
+                    </span>
+                    <span class="intro-video__duration">3:00 min</span>
+                </a>
+            </div>
+        </section>
+        <!-- End intro video section -->
 
      <!-- Start experience section -->
 <section class="services__section section--padding" id="capabilities">
@@ -270,7 +283,7 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
                         </span>
                         <div class="services__card--content">
                             <h3 class="services__card--title mb-15">Agentic Architecture & Scaffolding</h3>
-                            <p class="services__card--desc">I design the control loops, tool interfacing, and memory architecture that turn a language model into a reliable agent system that pursues a goal. The scaffold underneath the prompt, not just the prompt.</p>
+                            <p class="services__card--desc">I design the control loops and tool interfacing behind a reliable AI agent, the scaffold underneath the prompt.</p>
                         </div>
                     </div>
                 </div>
@@ -281,7 +294,7 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
                         </span>
                         <div class="services__card--content">
                             <h3 class="services__card--title mb-15">AI Exploration & Execution</h3>
-                            <p class="services__card--desc">I orchestrate multiple AI models and tools in parallel, from research through working prototype, using context engineering to keep every step grounded in real, retrieved information rather than a single crafted prompt.</p>
+                            <p class="services__card--desc">I orchestrate multiple AI models and tools in parallel, using context engineering to keep every step grounded in real information.</p>
                         </div>
                     </div>
                 </div>
@@ -1587,7 +1600,7 @@ html.dark .how-i-think-card {
         </button>
         <div class="ratio ratio-16x9">
   <video id="modalVideoIframe" controls playsinline preload="none" style="width:100%;height:100%;background:#000;">
-    <source src="assets/video/intro2.mp4" type="video/mp4">
+    <source src="assets/video/TTXS-Podcast-main1.mp4" type="video/mp4">
   </video>
 </div>
       </div>
@@ -1638,7 +1651,7 @@ if (videoModal) {
     var video = document.getElementById('modalVideoIframe');
     var source = video.querySelector('source');
     if (trigger && trigger.getAttribute('data-video') === 'intro') {
-      source.src = 'assets/video/intro2.mp4';
+      source.src = 'assets/video/TTXS-Podcast-main1.mp4';
       video.muted = false;
       video.load();
       var playPromise = video.play();
