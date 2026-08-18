@@ -7503,3 +7503,60 @@ blockquote::before {
     display: none !important;
   }
 }
+
+.prototype-card {
+  display: block;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(128,128,128,0.18);
+  background: rgba(255,255,255,0.02);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.prototype-card:hover {
+  box-shadow: 0 6px 36px rgba(232,86,58,0.14);
+  transform: translateY(-3px);
+  color: inherit;
+}
+
+html.dark .prototype-card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.09);
+}
+
+.prototype-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prototype-card__info {
+  padding: 20px 22px 24px;
+}
+
+.prototype-card__title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: inherit;
+}
+
+.prototype-card__tag {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #E8563A;
+  margin-bottom: 12px;
+}
+
+.prototype-card__mechanic {
+  font-size: 1.35rem;
+  line-height: 1.65;
+  opacity: 0.82;
+  margin: 0;
+}
