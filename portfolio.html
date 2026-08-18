@@ -421,6 +421,24 @@ html.dark .how-i-think-card {
     opacity: 0.82;
     margin: 0;
 }
+.governance-card {
+    background: #E8563A;
+    border-color: #E8563A;
+}
+html.dark .governance-card {
+    background: #E8563A;
+    border-color: #E8563A;
+}
+.governance-card:hover {
+    box-shadow: 0 6px 36px rgba(232,86,58,0.35);
+}
+.governance-card .card-question,
+.governance-card .card-copy {
+    color: #ffffff;
+}
+.governance-card .card-copy {
+    opacity: 0.92;
+}
 </style>
 <section class="section--padding border__bottom">
     <div class="container">
@@ -473,19 +491,19 @@ html.dark .how-i-think-card {
         </div>
         <div class="row g-4">
             <div class="col-lg-4">
-                <div class="how-i-think-card">
+                <div class="how-i-think-card governance-card">
                     <h3 class="card-question">Control Loops</h3>
                     <p class="card-copy">The execution sequence deciding when an agent acts, checks, or stops.</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="how-i-think-card">
+                <div class="how-i-think-card governance-card">
                     <h3 class="card-question">Tool Interfacing</h3>
                     <p class="card-copy">Scoped, permissioned access between a model and real systems, never unrestricted.</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="how-i-think-card">
+                <div class="how-i-think-card governance-card">
                     <h3 class="card-question">Human Checkpoints</h3>
                     <p class="card-copy">The specific points where autonomy stops and a person decides.</p>
                 </div>
