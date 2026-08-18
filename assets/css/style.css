@@ -7478,6 +7478,18 @@ blockquote::before {
   font-weight: 600;
 }
 
+.intro-video__label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 .play-badge {
   position: absolute;
   top: 12px;
