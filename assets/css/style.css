@@ -7544,6 +7544,15 @@ html.dark .prototype-card {
   color: inherit;
 }
 
+.prototype-card__category {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.65;
+  margin-bottom: 8px;
+}
+
 .prototype-card__tag {
   display: inline-block;
   font-size: 1.1rem;
