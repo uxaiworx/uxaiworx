@@ -28,6 +28,14 @@ if (localStorage.getItem("theme-color") === "dark") {
 </script>
 <style>
 @media (min-width: 769px) { .objective-value { max-width: 220px; } }
+.rezpulse-list { margin-top: 20px; padding-left: 1.3em; }
+.rezpulse-list li { font-size: 1.6rem; line-height: 1.8; margin-bottom: 18px; }
+.rezpulse-list li:last-child { margin-bottom: 0; }
+.rezpulse-list li::marker { color: #E8563A; font-weight: 700; }
+@media (max-width: 480px) {
+  .rezpulse-list { padding-left: 1.1em; }
+  .rezpulse-list li { font-size: 1.45rem; }
+}
 </style>
 <style id="resume-modal-css">
 #resumeAccessModal { display:none; position:fixed; inset:0; z-index:99999; align-items:center; justify-content:center; }
@@ -182,8 +190,16 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
                     <div style="margin-bottom:24px; box-shadow:0 4px 40px rgba(0,0,0,0.18); border-radius:8px; overflow:hidden;">
                         <img src="assets/img/other/rezpulse-exec.jpg" alt="REZpulse landing page" style="width:100%; height:auto; display:block;">
                     </div>
-                    <p style="font-size:1.7rem; line-height:1.9;">A resume sharing product with planned identity gated access, read tracking, and instant link revocation. None of that is built yet. Right now REZpulse is a landing page with a Google Sheets signup capture, validating demand before committing build time.</p>
-                    <p style="font-size:1.7rem; line-height:1.9; margin-top:20px;">That's the same discipline behind frameworks like Value vs Feasibility and Opportunity Solution Tree, not a gap to explain away. Planned stack, once build begins: Next.js, Vercel, Supabase.</p>
+                    <p style="font-size:1.7rem; line-height:1.9;">Every resume sent as a PDF carries a candidate's full name, phone number, email, and often a home address, exposed to anyone who receives the file with zero visibility into who opens it, forwards it, or stores it. That's more than a privacy inconvenience, it's a real security gap: identity thieves have used harvested resume data to pose as recruiters and HR professionals, extracting even more personal information from candidates who trust the outreach.</p>
+                    <p style="font-size:1.7rem; line-height:1.9; margin-top:20px;">REZpulse starts from that gap. Instead of a static PDF, a candidate controls a single gated link, a cloned, presentation ready version of their resume, with visibility and access entirely in their own hands.</p>
+                    <p style="font-size:1.7rem; line-height:1.9; margin-top:20px;">Currently validating demand through this landing page before committing engineering time to a full build. The planned capabilities:</p>
+                    <ul class="rezpulse-list">
+                        <li><strong>Know When You're Noticed.</strong> Real time alerts the moment a recruiter requests or opens the link, no more wondering if anyone saw it.</li>
+                        <li><strong>Real Time Read Tracking.</strong> A heartbeat script firing every 30 seconds, showing exactly how long each viewer actually spent reading.</li>
+                        <li><strong>Identity Gated Access.</strong> No anonymous views, every requester identifies themselves by name and company before the resume unlocks.</li>
+                        <li><strong>Instant Kill Switch.</strong> One dashboard toggle deactivates every active link at once, full control over exposure, always.</li>
+                        <li><strong>Location Insights.</strong> City and country level visibility into who's actually looking, so a candidate can see which markets are paying attention.</li>
+                    </ul>
                 </div>
             </div>
         </div>
