@@ -36,6 +36,10 @@
 .dark .home__navigation--menu__icon{
     background: #fff;
 }
+.dark .offcanvas__close--btn::before,
+.dark .offcanvas__close--btn::after{
+    background-color: #fff;
+}
 
 
 .dark .header__sticky.sticky{

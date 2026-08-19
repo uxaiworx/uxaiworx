@@ -306,6 +306,10 @@ const offcanvasHeader = function () {
   if (mobileMenuWrapper) {
     mobileMenuWrapper.addEventListener("click", function (e) {
       let targetElement = e.target;
+      if (targetElement.closest(".offcanvas__menu_item")) {
+        offcanvasHeader.classList.remove("open");
+        body.classList.remove("mobile_menu_open");
+      }
       if (targetElement.classList.contains("offcanvas__sub_menu_toggle")) {
         const parent = targetElement.parentElement;
         if (parent.classList.contains("active")) {
