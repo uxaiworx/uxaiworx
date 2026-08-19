@@ -1800,7 +1800,7 @@ form.addEventListener('submit', async function(e) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) animateSkills();
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0, rootMargin: '0px 0px -20% 0px' });
 
   var section = document.querySelector('.skills__section');
   if (section) observer.observe(section);
