@@ -228,8 +228,8 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="text-paragraph" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </span>  by <span><a class="text__secondary" href="#">UXAI worx</a></span>© 2026</p>
                     <ul class="footer__menu d-flex">
-                        <li><a class="footer__menu--link" href="shop.html">Terms & Condition</a></li>
-                        <li><a class="footer__menu--link" href="about.html">Privacy Policy</a></li>
+                        <li><a class="footer__menu--link" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a></li>
+                        <li><a class="footer__menu--link" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -259,6 +259,59 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
     }
     </script>
 
+
+<div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content" style="background:#1e1e2e; color:#fff; padding:20px;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(255,255,255,0.1);">
+        <h5 class="modal-title" style="color:#e05c2e;">Terms & Conditions</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size:14px; line-height:1.8;">
+        <p><strong>Last updated: June 2026</strong></p>
+        <p>Welcome to uxaiworx.com. By accessing this website you agree to the following terms.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Use of Content</h6>
+        <p>All content on this site including text, images, case studies, and design work is the intellectual property of UX AI Worx. You may not reproduce, distribute, or use any content without written permission.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Portfolio Work</h6>
+        <p>Case studies and portfolio items are shown for demonstration purposes. Client names and project details are shared with permission. All design work remains the property of the respective clients where applicable.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">External Links</h6>
+        <p>This site may contain links to third-party websites. UX AI Worx is not responsible for the content or privacy practices of those sites.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Disclaimer</h6>
+        <p>This website is provided as-is for portfolio and informational purposes. UX AI Worx makes no warranties regarding the accuracy or completeness of any information presented.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Contact</h6>
+        <p>Questions about these terms? Reach out at hello@uxaiworx.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Privacy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content" style="background:#1e1e2e; color:#fff; padding:20px;">
+      <div class="modal-header" style="border-bottom:1px solid rgba(255,255,255,0.1);">
+        <h5 class="modal-title" style="color:#e05c2e;">Privacy Policy</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size:14px; line-height:1.8;">
+        <p><strong>Last updated: June 2026</strong></p>
+        <p>UX AI Worx respects your privacy. This policy explains what information we collect and how we use it.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Information We Collect</h6>
+        <p>We collect limited information through Google Analytics including page views, session duration, and general geographic location. No personally identifiable information is collected without your consent.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Contact Form</h6>
+        <p>When you submit the contact form your name, email, and message are sent directly to hello@uxaiworx.com via Web3Forms. We do not store this information on our servers.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Cookies</h6>
+        <p>This site uses minimal cookies for analytics and theme preference storage only. No tracking cookies or advertising cookies are used.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Third Party Services</h6>
+        <p>We use Google Analytics for traffic insights and Web3Forms for contact form processing. Both services have their own privacy policies.</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Your Rights</h6>
+        <p>You may request deletion of any data associated with your contact form submission by emailing hello@uxaiworx.com</p>
+        <h6 style="color:#e05c2e; margin-top:20px;">Contact</h6>
+        <p>Privacy questions? Email hello@uxaiworx.com</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="resumeAccessModal">
     <div class="resume-modal-overlay" id="resumeModalOverlay"></div>
