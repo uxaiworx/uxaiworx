@@ -72,6 +72,10 @@ section {
   scroll-margin-top: 100px;
 }
 
+#prototype-labs {
+  scroll-margin-top: 122px;
+}
+
 html,
 body {
   min-height: 100%;
