@@ -28,6 +28,14 @@ if (localStorage.getItem("theme-color") === "dark") {
 </script>
 <style>
 @media (min-width: 769px) { .objective-value { max-width: 220px; } }
+.bizrecon-list { margin-top: 20px; padding-left: 1.3em; }
+.bizrecon-list li { font-size: 1.6rem; line-height: 1.8; margin-bottom: 18px; }
+.bizrecon-list li:last-child { margin-bottom: 0; }
+.bizrecon-list li::marker { color: #E8563A; font-weight: 700; }
+@media only screen and (max-width: 480px) {
+  .bizrecon-list { padding-left: 1.1em; }
+  .bizrecon-list li { font-size: 1.45rem; }
+}
 </style>
 <style id="resume-modal-css">
 #resumeAccessModal { display:none; position:fixed; inset:0; z-index:99999; align-items:center; justify-content:center; }
@@ -186,9 +194,27 @@ html.dark .resume-modal-input { border-color:rgba(255,255,255,0.18); }
                     <div style="margin:24px 0; box-shadow:0 4px 40px rgba(0,0,0,0.18); border-radius:8px; overflow:hidden;">
                         <img src="assets/img/other/biz-recon-progress.png" alt="BizRecon four step AI pipeline in progress" style="width:100%; height:auto; display:block;">
                     </div>
-                    <p style="font-size:1.7rem; line-height:1.9; margin-top:20px;">It's custom built on TanStack Start server functions and the Lovable AI Gateway, not a third party framework like LangChain or CrewAI, with row level security across reports, sources, synthesis, access codes, and audit log tables, and a brand color resolver integrated with Logo.dev's API. A custom Lovable build, coached through iterative schema and logic design, not a single prompt.</p>
+                    <p style="font-size:1.7rem; line-height:1.9; margin-top:20px;">It's custom built on TanStack Start server functions, with row level security across reports, sources, synthesis, access codes, and audit log tables, Gemini handling relevance filtering, synthesis, and review, and a brand color resolver integrated with Logo.dev's API. Coached through iterative schema and logic design, not generated in a single prompt.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Know Your Position Section -->
+    <section class="section--padding">
+        <div class="container">
+            <div class="mb-30">
+                <h2 class="section__heading--title">Know Your Position Before You Build</h2>
+                <p style="font-size:1.7rem; line-height:1.9; margin-top:20px; max-width:760px;">Understanding where a company already stands, and where competitors are already moving, changes what's actually worth building next.</p>
+            </div>
+            <ul class="bizrecon-list">
+                <li>Benchmarks AI/CX maturity against real competitor signals, not internal guesswork, scored 1 to 5 and traceable back to source</li>
+                <li>Surfaces where competitors have already staked ground, so effort isn't spent duplicating what exists</li>
+                <li>Flags real opportunity signals, the gaps nobody's filled yet, worth building toward</li>
+                <li>Every claim keeps its source URL, nothing ships as an unverified assumption</li>
+                <li>A human reviews and approves the brief before any team acts on it</li>
+                <li>Turns hours of scattered manual research into a reviewed brief in about 8 minutes</li>
+            </ul>
         </div>
     </section>
 
