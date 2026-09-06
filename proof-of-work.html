@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Proof of Work | UXAIWORX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#0b0b0b;--muted:#666;--rule:#e8e8e8;--accent:#e95036;--card:#fafafa;--max:1120px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;padding:34px 0 56px}
+.eyebrow,.brand,.footer{font-family:"IBM Plex Mono",monospace;letter-spacing:.08em}
+.topbar{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-size:12px;text-transform:uppercase;color:var(--accent)}
+.brand{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+h1{margin:42px 0 12px;font-size:clamp(52px,9vw,112px);line-height:.92;letter-spacing:-.06em;font-weight:800}
+.intro{max-width:780px;margin:0 0 42px;font-size:clamp(17px,2vw,23px);line-height:1.45;color:#262626}
+.media-list{display:grid;gap:24px}
+.media-card{background:var(--card);border:1px solid var(--rule);border-radius:18px;overflow:hidden;scroll-margin-top:24px}
+.media-copy{padding:24px 24px 18px}
+.kicker{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.plus{font-size:24px;line-height:1;font-family:"Manrope",sans-serif;font-weight:500}
+h2{margin:0 0 8px;font-size:clamp(24px,3vw,38px);letter-spacing:-.035em;line-height:1.1}
+.desc{margin:0;color:var(--muted);font-size:15px;line-height:1.6;max-width:780px}
+.player{padding:0 24px 24px}
+.video-wrap{position:relative}
+video{display:block;width:100%;max-height:72vh;background:#0a0a0a;border-radius:12px;object-fit:contain}
+audio{display:block;width:100%;min-height:54px}
+.play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,.15);border-radius:12px;transition:background .15s ease}
+.play-overlay:hover{background:rgba(0,0,0,.28)}
+.play-overlay.is-hidden{display:none}
+.play-button{width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.35);transition:transform .15s ease}
+.play-overlay:hover .play-button{transform:scale(1.06)}
+.play-button svg{width:26px;height:26px;margin-left:4px;fill:#fff}
+@media(max-width:700px){
+  .play-button{width:58px;height:58px}
+  .play-button svg{width:20px;height:20px;margin-left:3px}
+}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:34px;padding-top:20px;border-top:1px solid var(--rule);font-size:11px;text-transform:uppercase;color:#555}
+.footer a{color:inherit;text-decoration:none}.footer a:hover{color:var(--accent)}
+@media(max-width:700px){
+  .wrap{width:min(100% - 24px,var(--max));padding-top:20px}
+  .topbar{flex-direction:column}
+  h1{margin-top:30px}
+  .intro{margin-bottom:28px}
+  .media-list{gap:16px}
+  .media-copy{padding:20px 18px 14px}
+  .player{padding:0 12px 12px}
+  video{border-radius:10px;max-height:60vh}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="topbar">
+    <div class="eyebrow">Client Engagement Recordings</div>
+    <div class="brand">UXAIWORX</div>
+  </header>
+
+  <h1>Proof of Work</h1>
+  <p class="intro">Real recordings that show how I engage clients, lead conversations, and communicate complex ideas in real-world settings.</p>
+
+  <section class="media-list">
+    <article class="media-card" id="retail-pitch">
+      <div class="media-copy">
+        <div class="kicker"><span class="plus">+</span> Video</div>
+        <h2>National Retail Pitch</h2>
+        <p class="desc">Boardroom presentation for a 750+ location national retailer.</p>
+      </div>
+      <div class="player">
+        <div class="video-wrap">
+          <video controls playsinline preload="metadata" poster="/assets/video/visionworks-pitch-poster.jpg">
+            <source src="/assets/video/visionworks-pitch-meeting.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <div class="play-overlay" role="button" aria-label="Play video" tabindex="0">
+            <span class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="media-card" id="ski-resort-discovery">
+      <div class="media-copy">
+        <div class="kicker"><span class="plus">+</span> Audio</div>
+        <h2>Ski Resort Discovery</h2>
+        <p class="desc">Client stakeholder interviews focused on discovery, priorities, friction points, and future-state opportunities.</p>
+      </div>
+      <div class="player">
+        <audio controls preload="metadata">
+          <source src="/assets/video/stakeholder-interview-call-mitch.mp3" type="audio/mpeg">
+          Your browser does not support embedded audio.
+        </audio>
+      </div>
+    </article>
+
+    <article class="media-card" id="agentic-ai-mvp">
+      <div class="media-copy">
+        <div class="kicker"><span class="plus">+</span> Video</div>
+        <h2>Agentic AI MVP</h2>
+        <p class="desc">Avatar podcast interview covering the agent development process, human-in-the-loop design, and rapid MVP execution.</p>
+      </div>
+      <div class="player">
+        <div class="video-wrap">
+          <video controls playsinline preload="metadata" poster="/assets/video/ttxs-podcast-poster.jpg">
+            <source src="/assets/video/TTXS-Podcast-main1.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <div class="play-overlay" role="button" aria-label="Play video" tabindex="0">
+            <span class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <span>UXAIWORX</span>
+    <a href="https://uxaiworx.com/portfolio">uxaiworx.com/portfolio</a>
+  </footer>
+</main>
+<script>
+document.querySelectorAll('.video-wrap').forEach(function(wrap){
+  var video = wrap.querySelector('video');
+  var overlay = wrap.querySelector('.play-overlay');
+  function play(){ video.play(); }
+  overlay.addEventListener('click', play);
+  overlay.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); play(); }
+  });
+  video.addEventListener('play', function(){ overlay.classList.add('is-hidden'); });
+  video.addEventListener('pause', function(){ overlay.classList.remove('is-hidden'); });
+  video.addEventListener('ended', function(){ overlay.classList.remove('is-hidden'); });
+});
+</script>
+</body>
+</html>
