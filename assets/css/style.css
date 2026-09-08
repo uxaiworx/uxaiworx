@@ -2706,11 +2706,18 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: flex-start;
 }
 
+.hero__content--btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero__content--btn-caption {
   display: block;
   margin-top: 0.8rem;
   font-size: 1.2rem;
   font-weight: 400;
+  text-align: center;
   color: var(--foreground-sub-color);
 }
 
