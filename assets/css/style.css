@@ -2677,6 +2677,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .hero__content--footer {
   gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media only screen and (max-width: 991px) {
@@ -2696,6 +2698,26 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
+  }
+}
+
+.hero__content--btn-group {
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.hero__content--btn-caption {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--foreground-sub-color);
+}
+
+@media only screen and (max-width: 991px) {
+  .hero__content--btn-group {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
